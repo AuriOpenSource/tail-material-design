@@ -5,6 +5,7 @@
     "components:build": "wireit",
     "components:merge": "wireit",
     "components:prejss": "wireit",
+    "build:clean": "wireit",
     "build": "wireit"
   },
   "wireit": {
@@ -25,6 +26,15 @@
     },
     "build": {
       "dependencies": [
+        "components:prejss"
+      ]
+    },
+    "clear": {
+      "command": "rm -rf .wireit/*/cache"
+    },
+    "build:clean": {
+      "dependencies": [
+        "clear",
         "components:prejss"
       ]
     }
