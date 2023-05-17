@@ -1,0 +1,19 @@
+.checkbox {
+    @apply w-5 h-5 m-1 appearance-none border;
+
+    &-container {
+        @apply relative flex items-center mr-2;
+    }
+
+    &:checked {
+        content: " ";
+        background-clip: content-box;
+        @apply w-5 h-5 m-1 border transition-all duration-200;
+
+        &::after {
+            content: "";
+            background-clip: content-box;
+            @apply w-5 h-5 transition-all duration-200;
+          }
+    }
+}
