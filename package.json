@@ -1,0 +1,23 @@
+{
+  "name": "Tailwind Material Design",
+  "version": "0.0.6",
+  "scripts": {
+    "components:build": "postcss --config src/components src/components/**/*.css --base src --dir dist",
+    "components:merge": "cat dist/components/*.css > dist/components.css",
+    "components:prejss": "prejss-cli dist/components.css",
+    "components": "pnpm components:build && pnpm components:merge && pnpm components:prejss",
+    "build": "pnpm components"
+  },
+  "type": "module",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "css-declaration-sorter": "^6.4.0",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "prejss-cli": "^0.3.3",
+    "tailwindcss": "^3.3.2"
+  }
+}

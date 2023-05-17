@@ -1,0 +1,22 @@
+.radio {
+  &-container {
+    @apply relative;
+  }
+
+  &-layer {
+    @apply absolute left-1/2 top-1/2 transform -translate-x-1/2
+    -translate-y-1/2 w-10 h-10 rounded-[3rem] transition-all duration-200
+    cursor-pointer;
+  }
+
+  &-input {
+    @apply w-5 h-5 m-0 appearance-none;
+
+    &::before {
+      content: " ";
+      background-clip: content-box;
+      @apply w-5 h-5 inline-block rounded-[1.25rem] transition-all
+      duration-200 p-2 border-2;
+    }
+  }
+}

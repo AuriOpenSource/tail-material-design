@@ -1,0 +1,59 @@
+.btn {
+  -webkit-tap-highlight-color: transparent;
+  @apply inline-flex border-none rounded-[2.5rem] h-10 items-center px-6 justify-center gap-2
+  cursor-pointer overflow-hidden transition-all duration-200 flex-shrink-0;
+
+  & svg {
+    @apply fill-current;
+  }
+
+  &.icon-left {
+    @apply pl-4;
+    & > svg {
+      @apply w-[18px] h-[18x];
+    }
+  }
+
+  &.icon-full {
+    @apply w-10 p-0;
+    & > svg {
+      @apply w-6 w-6;
+    }
+  }
+
+  &:disabled {
+    --tw-bg-opacity: 0.12;
+    --tw-text-opacity: 0.38;
+    background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
+    color: rgb(var(--color-on-primary) / var(--tw-text-opacity));
+    @apply cursor-auto;
+  }
+
+  &.outlined {
+    @apply bg-transparent ring-1 ring-[rgb(var(--color-on-surface))]/10;
+  }
+
+  &:not(:disabled) {
+    &.filled {
+      --tw-bg-opacity: 1;
+      --tw-text-opacity: 1;
+      background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
+      color: rgb(var(--color-on-primary) / var(--tw-text-opacity));
+    }
+    &.outlined {
+      @apply text-[rgb(var(--color-on-primary)/)] ring-[rgb(var(--color-outline))];
+    }
+  }
+}
+
+@media (hover: hover) {
+  .btn {
+    &.filled:hover {
+      --tw-bg-opacity: 0.7;
+    }
+
+    &.outlined:hover {
+      @apply ring-2;
+    }
+  }
+}
