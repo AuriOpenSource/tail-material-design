@@ -24,9 +24,6 @@
         "components:merge"
       ]
     },
-    "tsc": {
-      "command": "tsc"
-    },
     "build": {
       "dependencies": [
         "components:prejss"
@@ -44,8 +41,6 @@
   },
   "type": "module",
   "devDependencies": {
-    "@types/postcss-import": "^14.0.0",
-    "@types/tailwindcss": "^3.1.0",
     "autoprefixer": "^10.4.14",
     "css-declaration-sorter": "^6.4.0",
     "cssnano": "^6.0.1",
@@ -55,7 +50,6 @@
     "postcss-nested": "^6.0.1",
     "prejss-cli": "^0.3.3",
     "tailwindcss": "^3.3.2",
-    "ts-node": "^10.9.1",
     "wireit": "^0.9.5"
   }
 }
