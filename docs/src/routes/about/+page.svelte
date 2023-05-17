@@ -87,15 +87,42 @@
 	</div>
 </div>
 
-<form>
+<form class="inline-flex">
 	<fieldset>
 		<div class="radio-container">
-			<input class="radio-input" name="test" type="radio" />
-			<div class="radio-layer" />
+			<input class="radio-input" id="zenon" checked name="test" type="radio" />
+			<label for="zenon">Zenon</label>
+			<!-- <div class="radio-layer" /> -->
 		</div>
 		<div class="radio-container">
-			<input class="radio-input" name="test" type="radio" />
-			<div class="radio-layer" />
+			<input class="radio-input" id="mira" name="test" type="radio" />
+			<label for="mira">Mira</label>
+			<!-- <div class="radio-layer" /> -->
+		</div>
+	</fieldset>
+	<fieldset>
+		<div class="radio-container">
+			<input class="radio-input-secondary" id="blaze" checked name="test2" type="radio" />
+			<label for="blaze">Blaze</label>
+			<!-- <div class="radio-layer" /> -->
+		</div>
+		<div class="radio-container">
+			<input class="radio-input-secondary" id="vibe" name="test2" type="radio" />
+			<label for="vibe">vibe</label>
+			<!-- <div class="radio-layer" /> -->
+		</div>
+	</fieldset>
+</form>
+
+<form>
+	<fieldset>
+		<div class="checkbox-container">
+			<input id="item1" type="checkbox" class="checkbox" />
+			<label for="item1">item1</label>
+		</div>
+		<div class="checkbox-container">
+			<input id="item2" type="checkbox" class="checkbox" />
+			<label for="item2">item2</label>
 		</div>
 	</fieldset>
 </form>

@@ -1,22 +1,30 @@
 .radio {
   &-container {
-    @apply relative;
+    @apply relative flex items-center mr-2;
   }
 
   &-layer {
-    @apply absolute left-1/2 top-1/2 transform -translate-x-1/2
-    -translate-y-1/2 w-10 h-10 rounded-[3rem] transition-all duration-200
-    cursor-pointer;
+    @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-[3rem] transition-all duration-200 cursor-pointer;
   }
 
   &-input {
-    @apply w-5 h-5 m-0 appearance-none;
+    @apply w-5 h-5 m-1 p-2 inline-block border border-green-500 rounded-full appearance-none;
 
-    &::before {
+    &:checked {
       content: " ";
       background-clip: content-box;
-      @apply w-5 h-5 inline-block rounded-[1.25rem] transition-all
-      duration-200 p-2 border-2;
+      @apply w-5 h-5 p-[0.19rem] border-2 transition-all duration-200 rounded-full bg-green-400;
+    }
+    
+    &-secondary {
+      @apply w-5 h-5 m-1 p-2 inline-block border border-green-900 rounded-full appearance-none bg-transparent;
+      
+      &:checked {
+        content: " ";
+        background-clip: content-box;
+        background-color: var(--color-on-primary);
+        @apply w-5 h-5 p-[0.19rem] border-2 transition-all duration-200 rounded-full bg-green-900;
+      }
     }
   }
 }
