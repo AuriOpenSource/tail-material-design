@@ -10,16 +10,38 @@
   },
   "wireit": {
     "components:build": {
+      "files": [
+        "src/**/*.{js,css}",
+        "src/**/postcss.config.js"
+      ],
+      "output": [
+        "dist/**"
+      ],
+      "clean": "if-file-deleted",
       "command": "postcss --config src/components src/components/**/*.css --base src --dir dist"
     },
     "components:merge": {
       "command": "cat dist/components/*.css > dist/components.css",
+      "clean": "if-file-deleted",
+      "files": [
+        "dist/components/*.css"
+      ],
+      "output": [
+        "dist/components.css"
+      ],
       "dependencies": [
         "components:build"
       ]
     },
     "components:prejss": {
       "command": "prejss-cli dist/components.css",
+      "files": [
+        "dist/components.css"
+      ],
+      "output": [
+        "dist/components.js"
+      ],
+      "clean": true,
       "dependencies": [
         "components:merge"
       ]
