@@ -2,11 +2,64 @@
   "name": "Tailwind Material Design",
   "version": "0.0.6",
   "scripts": {
-    "components:build": "postcss --config src/components src/components/**/*.css --base src --dir dist",
-    "components:merge": "cat dist/components/*.css > dist/components.css",
-    "components:prejss": "prejss-cli dist/components.css",
-    "components": "pnpm components:build && pnpm components:merge && pnpm components:prejss",
-    "build": "pnpm components"
+    "components:build": "wireit",
+    "components:merge": "wireit",
+    "components:prejss": "wireit",
+    "build:clean": "wireit",
+    "build": "wireit"
+  },
+  "wireit": {
+    "components:build": {
+      "files": [
+        "src/**/*.{js,css}",
+        "src/**/postcss.config.js"
+      ],
+      "output": [
+        "dist/**"
+      ],
+      "clean": "if-file-deleted",
+      "command": "postcss --config src/components src/components/**/*.css --base src --dir dist"
+    },
+    "components:merge": {
+      "command": "cat dist/components/*.css > dist/components.css",
+      "clean": "if-file-deleted",
+      "files": [
+        "dist/components/*.css"
+      ],
+      "output": [
+        "dist/components.css"
+      ],
+      "dependencies": [
+        "components:build"
+      ]
+    },
+    "components:prejss": {
+      "command": "prejss-cli dist/components.css",
+      "files": [
+        "dist/components.css"
+      ],
+      "output": [
+        "dist/components.js"
+      ],
+      "clean": true,
+      "dependencies": [
+        "components:merge"
+      ]
+    },
+    "build": {
+      "dependencies": [
+        "components:prejss"
+      ]
+    },
+    "clear": {
+      "command": "rm -rf .wireit/*/cache"
+    },
+    "build:clean": {
+      "dependencies": [
+        "clear",
+        "components:prejss"
+      ]
+    }
   },
   "type": "module",
   "devDependencies": {
@@ -18,6 +71,7 @@
     "postcss-import": "^15.1.0",
     "postcss-nested": "^6.0.1",
     "prejss-cli": "^0.3.3",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "wireit": "^0.9.5"
   }
 }
