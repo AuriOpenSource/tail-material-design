@@ -3,13 +3,13 @@
 
 ![Logo](https://cdn.jsdelivr.net/gh/realfakenerd/tail-material-design@master/docs/static/GithubSocial.png)
 
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/tail-material-design?style=flat-square)
-![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/tail-material-design?style=flat-square)
-![GitHub](https://img.shields.io/github/license/realfakenerd/tail-material-design?style=flat-square)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/tail-material-design?style=flat-square&logo=npm)
+![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/tail-material-design?style=flat-square&logo=jsdelivr)
+![GitHub](https://img.shields.io/github/license/realfakenerd/tail-material-design?style=flat-square&logo=github)
 ![Website](https://img.shields.io/website?down_message=oh%20no&style=flat-square&up_message=up%20and%20running&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Ftail-material-design)
-![GitHub last commit](https://img.shields.io/github/last-commit/realfakenerd/tail-material-design?style=flat-square)
-![GitHub contributors](https://img.shields.io/github/contributors/realfakenerd/tail-material-design?style=flat-square)
-![Components made](https://img.shields.io/badge/components%20ready-7-yellow?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/realfakenerd/tail-material-design?style=flat-square&logo=github)
+![GitHub contributors](https://img.shields.io/github/contributors/realfakenerd/tail-material-design?style=flat-square&logo=github)
+![Components made](https://img.shields.io/badge/components%20ready-7-yellow?style=flat-square&logo=materialdesign&labelColor=fafafa)
 
 ## What we have already done
 - Action
