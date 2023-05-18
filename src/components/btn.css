@@ -41,7 +41,7 @@
       color: rgb(var(--color-on-primary) / var(--tw-text-opacity));
     }
     &.outlined {
-      @apply text-[rgb(var(--color-on-primary)/)] ring-[rgb(var(--color-outline))];
+      @apply text-[rgb(var(--color-on-primary))] ring-[rgb(var(--color-outline))];
     }
   }
 }

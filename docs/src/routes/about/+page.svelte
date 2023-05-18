@@ -1,5 +1,5 @@
 <script>
-	import Button from '$lib/components/button.svelte';
+	import { InputRadio, Button, InputRadioGroup } from "$lib/components";
 </script>
 
 <svelte:head>
@@ -87,31 +87,16 @@
 	</div>
 </div>
 
-<form class="inline-flex">
-	<fieldset>
-		<div class="radio-container">
-			<input class="radio-input" id="zenon" checked name="test" type="radio" />
-			<label for="zenon">Zenon</label>
-			<!-- <div class="radio-layer" /> -->
-		</div>
-		<div class="radio-container">
-			<input class="radio-input" id="mira" name="test" type="radio" />
-			<label for="mira">Mira</label>
-			<!-- <div class="radio-layer" /> -->
-		</div>
-	</fieldset>
-	<fieldset>
-		<div class="radio-container">
-			<input class="radio-input-secondary" id="blaze" checked name="test2" type="radio" />
-			<label for="blaze">Blaze</label>
-			<!-- <div class="radio-layer" /> -->
-		</div>
-		<div class="radio-container">
-			<input class="radio-input-secondary" id="vibe" name="test2" type="radio" />
-			<label for="vibe">vibe</label>
-			<!-- <div class="radio-layer" /> -->
-		</div>
-	</fieldset>
+<form>
+	<InputRadioGroup row inlineBlock>
+		<InputRadio label="Zenon" name="test" checked />
+		<InputRadio label="Mira" name="test" />
+	</InputRadioGroup>
+
+	<InputRadioGroup row inlineBlock>
+		<InputRadio label="Blaze" name="test2" secondary checked />
+		<InputRadio label="Vibe" name="test2" secondary />
+	</InputRadioGroup>
 </form>
 
 <form>
