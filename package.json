@@ -1,6 +1,16 @@
 {
   "name": "Tailwind Material Design",
   "version": "0.0.6",
+  "description": "Tailwindcss plugin to add material design styles to your webapp",
+  "author": "Lucas Ouverney",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realfakenerd/tail-material-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/realfakenerd/tail-material-design/issues"
+  },
+  "main": "src/index.js",
   "scripts": {
     "components:build": "wireit",
     "components:merge": "wireit",
