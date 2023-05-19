@@ -11,6 +11,22 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/realfakenerd/tail-material-design?style=flat-square&logo=github)
 ![Components made](https://img.shields.io/badge/components%20ready-7-yellow?style=flat-square&logo=materialdesign&labelColor=fafafa)
 
+## Installing and how to use
+```bash
+pnpm add -D tail-material-design
+```
+
+```typescript
+import tmd from 'tail-material-design';
+import type { Config } from 'tailwindcss';
+
+export default {
+    plugin: [tmd]
+    
+    // rest of your config...
+} satisfies Config;
+```
+
 ## What we have already done
 - Action
     - 👍 Common Buttons
