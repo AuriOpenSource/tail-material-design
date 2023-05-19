@@ -21,10 +21,38 @@ import tmd from 'tail-material-design';
 import type { Config } from 'tailwindcss';
 
 export default {
-    plugin: [tmd]
+    plugins: [tmd]
     
     // rest of your config...
 } satisfies Config;
+```
+### We sugest you use the tailwind-material-colors package
+[Tailwind-Material-Colors repo](https://github.com/JavierM42/tailwind-material-colors)
+
+It will give you a better experience with colors.
+
+```bash
+pnpm add -D tailwind-material-colors
+```
+
+```typescript
+import { withMaterialColors } from 'tailwind-material-colors'
+import tmd from 'tail-material-design';
+export default withMaterialColors({
+  // Here, your tailwind config.
+  // (Do not specify theme.colors or theme.extend.colors as they will be overwritten).
+  plugins: [tmd]
+}, {
+  // Here, your base colors as HEX values
+  // primary is required
+  primary: '#ff0000',
+  // secondary and/or tertiary are optional, if not set they will be derived from the primary color
+  secondary: '#ffff00',
+  tertiary: '#0000ff',
+  // extra named colors may also be included
+  green: '#00ff00'
+  blue: '#0000ff'
+});
 ```
 
 ## What we have already done
