@@ -1,7 +1,7 @@
 # Tail Material Design
 **What you wanted, now you have it**
 
-![Logo](https://cdn.jsdelivr.net/gh/realfakenerd/tail-material-design@master/docs/static/GithubSocial.png)
+![Logo](https://raw.githubusercontent.com/AuriOpenSource/tail-material-design/main/docs/static/GH_Social.png)
 
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/tail-material-design?style=flat-square&logo=npm)
 ![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hm/tail-material-design?style=flat-square&logo=jsdelivr)
