@@ -1,6 +1,8 @@
 # Tail Material Design
 **What you wanted, now you have it**
 
+Tail Material Design is a comprehensive library that brings the power of Material Design to Tailwind CSS. With Tail Material Design, you can easily add modern and visually appealing Material Design styles to your web projects. The library provides pre-defined styles for various components, allowing you to accelerate development and create aesthetically pleasing web apps.
+
 ![Logo](https://raw.githubusercontent.com/AuriOpenSource/tail-material-design/main/docs/static/GH_Social.png)
 
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/tail-material-design?style=flat-square&logo=npm)
@@ -11,11 +13,23 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/realfakenerd/tail-material-design?style=flat-square&logo=github)
 ![Components made](https://img.shields.io/badge/components%20ready-7-yellow?style=flat-square&logo=materialdesign&labelColor=fafafa)
 
-## Installing and how to use
-```bash
+## Key Features:
+- Seamless integration with Tailwind CSS.
+- Pre-defined Material Design styles to expedite development.
+- Modern and visually appealing interface for your web app.
+- Flexible customization options to meet your project's specific needs.
+
+## Installing:
+To get started with Tail Material Design, follow these steps:
+
+1. Install Tailwind CSS in your project (if not already installed)
+
+2. Install Tail Material Design using your preferred package manager:
+```shell
 pnpm add -D tail-material-design
 ```
 
+3. Import and configure Tail Material Design in your Tailwind CSS configuration file (typically named tailwind.config.js):
 ```typescript
 import tmd from 'tail-material-design';
 import type { Config } from 'tailwindcss';
@@ -26,15 +40,17 @@ export default {
     // rest of your config...
 } satisfies Config;
 ```
+
 ### We sugest you use the tailwind-material-colors package
 [Tailwind-Material-Colors repo](https://github.com/JavierM42/tailwind-material-colors)
+Optionally, consider using the tailwind-material-colors package for a better color experience.
+It will give you a better experience with colors.:
 
-It will give you a better experience with colors.
-
+1. Install it using the package manager of your choice:
 ```bash
 pnpm add -D tailwind-material-colors
 ```
-
+2. Import and configure tailwind-material-colors along with Tail Material Design:
 ```typescript
 import { withMaterialColors } from 'tailwind-material-colors'
 import tmd from 'tail-material-design';
@@ -55,7 +71,17 @@ export default withMaterialColors({
 });
 ```
 
+## How to Use:
+Here's a simple example of how you can leverage the Material Design styles in your web app:
+
+```html
+<div class="flex items-center justify-center">
+  <button class="btn btn-outlined">Click Here</button>
+</div>
+```
+
 ## What we have already done
+Tail Material Design provides a growing collection of Material Design components. Here's an overview of what has already been implemented:
 - Action
     - 👍 Common Buttons
     - ❌ Extended FABs
@@ -93,3 +119,9 @@ export default withMaterialColors({
     - ❌ Switch
 - Text Inputs
     - ❌ Text Fields
+
+## Contribution
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License.
