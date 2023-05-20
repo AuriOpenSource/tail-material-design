@@ -63,7 +63,7 @@
     }
 
   .btn:not(:disabled).outlined {
-  color: rgb(var(--color-on-primary)/);
+  color: rgb(var(--color-on-primary));
   --tw-ring-color: rgb(var(--color-outline));
 }
 

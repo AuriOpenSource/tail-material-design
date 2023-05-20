@@ -1,53 +1,58 @@
 .radio-container {
-      position: relative;
-      margin-right: 0.5rem;
-      display: flex;
-      align-items: center;
+    position: relative;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
 }
   .radio-layer {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      height: 2.5rem;
-      width: 2.5rem;
-      --tw-translate-x: -50%;
-      --tw-translate-y: -50%;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-      cursor: pointer;
-      border-radius: 3rem;
-      transition-property: all;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 200ms;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    --tw-translate-x: -50%;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    cursor: pointer;
+    border-radius: 3rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+}
+  .radio-group.row {
+    display: inline-flex;
 }
   .radio-input {
-      margin: 0.25rem;
-      display: inline-block;
-      height: 1.25rem;
-      width: 1.25rem;
-      -webkit-appearance: none;
-         -moz-appearance: none;
-              appearance: none;
-      border-radius: 9999px;
-      border-width: 1px;
-      --tw-border-opacity: 1;
-      border-color: rgb(34 197 94 / var(--tw-border-opacity));
-      padding: 0.5rem;
-}
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+    margin: 0.25rem;
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 9999px;
+    border-width: 2px;
+    padding: 0.5rem;
+  }
   .radio-input:checked {
-      content: " ";
+      content: "";
       background-clip: content-box;
+      border-color: rgb(var(--color-primary));
+      background-color: rgb(var(--color-primary));
+      animation: dilatedRadio 300ms cubic-bezier(0, 0, 0.2, 1);
       height: 1.25rem;
       width: 1.25rem;
       border-radius: 9999px;
-      border-width: 2px;
-      --tw-bg-opacity: 1;
-      background-color: rgb(74 222 128 / var(--tw-bg-opacity));
-      padding: 0.19rem;
+      padding: 0.18rem;
       transition-property: all;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 200ms;
+      transition-duration: 150ms;
     }
-  .radio-input-secondary {
+  .radio-input.secondary {
+      --tw-border-opacity: 1;
+      border-color: rgb(var(--color-secondary) / var(--tw-border-opacity));
       margin: 0.25rem;
       display: inline-block;
       height: 1.25rem;
@@ -56,24 +61,34 @@
          -moz-appearance: none;
               appearance: none;
       border-radius: 9999px;
-      border-width: 1px;
-      --tw-border-opacity: 1;
-      border-color: rgb(20 83 45 / var(--tw-border-opacity));
+      border-width: 2px;
       background-color: transparent;
       padding: 0.5rem;
-}
-  .radio-input-secondary:checked {
+    }
+  .radio-input.secondary:checked {
         content: " ";
         background-clip: content-box;
-        background-color: var(--color-on-primary);
+        border-color: rgb(var(--color-on-primary));
+        background-color: rgb(var(--color-on-primary));
+        animation: dilatedRadio 200ms cubic-bezier(0, 0, 0.2, 1);
         height: 1.25rem;
         width: 1.25rem;
         border-radius: 9999px;
-        border-width: 2px;
-        --tw-bg-opacity: 1;
-        background-color: rgb(20 83 45 / var(--tw-bg-opacity));
-        padding: 0.19rem;
+        padding: 0.18rem;
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 200ms;
+        transition-duration: 150ms;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
       }
+
+@keyframes dilatedRadio {
+  10% {
+    padding: 0.5rem;
+  }
+  50% {
+    padding: 0.09rem;
+  }
+  100% {
+    padding: 0.18rem;
+  }
+}
