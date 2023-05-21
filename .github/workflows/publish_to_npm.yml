@@ -13,18 +13,35 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: "Set up pnpm"
+        uses: pnpm/action-setup@v2
+
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: "Set up pnpm"
+        uses: pnpm/action-setup@v2
+
+      - name: check latest released version
+        id: check
+        uses: EndBug/version-check@v2.1.0
+        with:
+          file-url: https://cdn.jsdelivr.net/npm/tail-material-design/package.json
+          static-checking: localIsNew
 
       - name: Install dependencies
-        run: npm install
+        if: steps.check.outputs.changed == 'true'
+        run: pnpm install
 
       - name: Build package
-        run: npm run build
+        if: steps.check.outputs.changed == 'true'
+        run: pnpm build
 
       - name: Publish to npmjs.org
+        if: steps.check.outputs.changed == 'true'
+        run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        run: npm publish
