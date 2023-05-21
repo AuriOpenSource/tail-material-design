@@ -1,7 +1,7 @@
 name: Build and Publish Package
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
