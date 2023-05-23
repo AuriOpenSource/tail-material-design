@@ -76,7 +76,7 @@
     }
   },
   "type": "module",
-  "packageManager": "pnpm",
+  "packageManager": "pnpm@8",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "css-declaration-sorter": "^6.4.0",
