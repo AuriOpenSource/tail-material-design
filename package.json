@@ -7,6 +7,7 @@
     "Roan Lopes"
   ],
   "license": "MIT",
+  "packageManager": "pnpm",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/realfakenerd/tail-material-design.git"
