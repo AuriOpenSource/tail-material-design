@@ -16,16 +16,28 @@ jobs:
       - name: "Set up pnpm"
         uses: pnpm/action-setup@v2
         with:
-          version: 8.5.0
+          version: 8
+          run_insall: false
+          
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+  
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: 18
           cache: 'pnpm'
-
-      - name: "Set up pnpm"
-        uses: pnpm/action-setup@v2
 
       - name: check latest released version
         id: check
