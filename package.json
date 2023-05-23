@@ -1,6 +1,6 @@
 {
   "name": "tail-material-design",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Tailwindcss plugin to add material design styles to your webapp",
   "author": "Lucas Ouverney <realfakenerd@gmail.com> (https://dev-lucasouverney.vercel.app/)",
   "contributors": [
