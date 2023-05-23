@@ -37,7 +37,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 18
-          cache: 'pnpm'
 
       - name: check latest released version
         id: check
