@@ -43,13 +43,13 @@ export default {
 
 4. Optional if you don't want to use tailwindcss, you can still use the components from a CDN:
 ```html
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tail-material-design@0.0.8/dist/components/<COMPONENT_NAME>.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tail-material-design/dist/components/<COMPONENT_NAME>.min.css">
  <!-- or you can use the link with all components -->
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tail-material-design@0.0.8/dist/components.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tail-material-design/dist/components.min.css">
 ```
 ```css
 /* As an alternative, you can install the package and import on your css file */
-@import url("https://cdn.jsdelivr.net/npm/tail-material-design@0.0.8/dist/components.min.css")
+@import url("https://cdn.jsdelivr.net/npm/tail-material-design/dist/components.min.css")
 ```
 
 ### We sugest you use the tailwind-material-colors package
