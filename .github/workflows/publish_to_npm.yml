@@ -43,7 +43,7 @@ jobs:
         id: check
         uses: EndBug/version-check@v2.1.0
         with:
-          file-url: https://cdn.jsdelivr.net/npm/tail-material-design/package.json
+          file-url: https://cdn.jsdelivr.net/npm/tail-material-design@latest/package.json
           static-checking: localIsNew
 
       - name: Install dependencies
