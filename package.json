@@ -35,7 +35,7 @@
       "command": "postcss --config src/components src/components/**/*.css --base src --dir dist"
     },
     "components:merge": {
-      "command": "cat dist/components/*.css > dist/components.css",
+      "command": "cat dist/components/**/*.css > dist/components.css",
       "clean": "if-file-deleted",
       "files": [
         "dist/components/*.css"
@@ -76,7 +76,7 @@
     }
   },
   "type": "module",
-  "packageManager": "pnpm@8",
+  "packageManager": "^pnpm@8.3.1",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
     "css-declaration-sorter": "^6.4.0",
