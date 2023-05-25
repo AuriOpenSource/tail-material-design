@@ -20,9 +20,14 @@
     "components:merge": "wireit",
     "components:prejss": "wireit",
     "build:clean": "wireit",
+    "bc":"wireit",
     "build": "wireit"
   },
   "wireit": {
+    "bc": {
+      "files": ["*"],
+      "command": "npx better-commits"
+    },
     "components:build": {
       "files": [
         "src/**/*.{js,css}",
@@ -79,6 +84,7 @@
   "packageManager": "pnpm@8",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "better-commits": "^1.5.0",
     "css-declaration-sorter": "^6.4.0",
     "cssnano": "^6.0.1",
     "postcss": "^8.4.23",
