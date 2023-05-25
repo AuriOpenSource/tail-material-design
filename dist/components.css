@@ -47,7 +47,7 @@
     cursor: auto;
   }
 
-  .btn.outlined {
+  .btn-outlined {
   background-color: transparent;
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -55,125 +55,31 @@
   --tw-ring-color: rgb(var(--color-on-surface) / 0.1);
 }
 
-  .btn:not(:disabled).filled {
-      --tw-bg-opacity: 1;
-      --tw-text-opacity: 1;
-      background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
-      color: rgb(var(--color-on-primary) / var(--tw-text-opacity));
-    }
-
-  .btn:not(:disabled).outlined {
-  color: rgb(var(--color-on-primary));
-  --tw-ring-color: rgb(var(--color-outline));
-}
-
-@media (hover: hover) {
-    .btn.filled:hover {
-      --tw-bg-opacity: 0.7;
-    }
-
-    .btn.outlined:hover {
+  @media (hover: hover) {
+      .btn .btn-filled:hover {
+        --tw-bg-opacity: 0.7;
+      }
+  
+      .btn .btn-outlined:hover {
     --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
     --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
     box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   }
-}
-.card {
-  background-color: rgb(var(--color-surface));
-  color: rgb(var(--color-on-surface));
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  border-style: none;
-  padding: 1rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-}
-
-  .card-outlined {
-    border: solid 1px rgb(var(--color-outline));
   }
 
-  .card-filled {
-    background-color: rgb(var(--color-surface-variant));
+.btn:not(:disabled).btn-filled {
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+    background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
+    color: rgb(var(--color-on-primary) / var(--tw-text-opacity));
   }
 
-  .card:is(button, a) {
-    text-align: inherit;
-    font: inherit;
-    -webkit-tap-highlight-color: transparent;
-    cursor: pointer;
-  }
-
-@media print, (force-colors: active) {
-  .card-filled {
-    outline: solid 2px;
-  }
-}
-.checkbox {
-        margin: 0.25rem;
-        height: 1.25rem;
-        width: 1.25rem;
-        -webkit-appearance: none;
-           -moz-appearance: none;
-                appearance: none;
-        border-width: 1px;
+.btn:not(:disabled).btn-outlined {
+  color: rgb(var(--color-on-primary));
+  --tw-ring-color: rgb(var(--color-outline));
 }
 
-    .checkbox-container {
-        position: relative;
-        margin-right: 0.5rem;
-        display: flex;
-        align-items: center;
-}
 
-    .checkbox:checked {
-        content: " ";
-        background-clip: content-box;
-        margin: 0.25rem;
-        height: 1.25rem;
-        width: 1.25rem;
-        border-width: 1px;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 200ms;
-    }
-
-    .checkbox:checked::after {
-            content: "";
-            background-clip: content-box;
-            height: 1.25rem;
-            width: 1.25rem;
-            transition-property: all;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 200ms;
-          }.divider {
-  margin: 0px;
-  height: 0px;
-  border-style: none;
-  border-bottom: solid 1px currentColor
-}
-
-  .divider-middle {
-  margin-left: 1rem;
-  margin-right: 1rem
-}
-
-  .divider-right {
-  margin-right: 1rem
-}
-
-  .divider-list-inset {
-  margin-left: 1rem;
-  margin-right: 1.5rem
-}
-
-  .divider.vertical-space {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem
-}
 .fab {
   print-color-adjust: exact;
   -webkit-print-color-adjust: exact;
@@ -239,6 +145,65 @@
   button:hover .layer {
     opacity: 0.08;
   }
+}
+.card {
+  background-color: rgb(var(--color-surface));
+  color: rgb(var(--color-on-surface));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border-style: none;
+  padding: 1rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+  .card-outlined {
+    border: solid 1px rgb(var(--color-outline));
+  }
+
+  .card-filled {
+    background-color: rgb(var(--color-surface-variant));
+  }
+
+  .card:is(button, a) {
+    text-align: inherit;
+    font: inherit;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
+
+@media print, (force-colors: active) {
+  .card-filled {
+    outline: solid 2px;
+  }
+}
+.divider {
+  margin: 0px;
+  height: 0px;
+  border-style: none;
+  border-bottom: solid 1px currentColor
+}
+
+  .divider-middle {
+  margin-left: 1rem;
+  margin-right: 1rem
+}
+
+  .divider-right {
+  margin-right: 1rem
+}
+
+  .divider-list-inset {
+  margin-left: 1rem;
+  margin-right: 1.5rem
+}
+
+  .divider.vertical-space {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem
 }
 .list {
       display: flex;
@@ -342,7 +307,44 @@ li {
     background-color: rgb(var(--color-on-surface) / 0.12);
   }
 }
-.radio-container {
+.checkbox {
+        margin: 0.25rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        border-width: 1px;
+}
+
+    .checkbox-container {
+        position: relative;
+        margin-right: 0.5rem;
+        display: flex;
+        align-items: center;
+}
+
+    .checkbox:checked {
+        content: " ";
+        background-clip: content-box;
+        margin: 0.25rem;
+        height: 1.25rem;
+        width: 1.25rem;
+        border-width: 1px;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+    }
+
+    .checkbox:checked::after {
+            content: "";
+            background-clip: content-box;
+            height: 1.25rem;
+            width: 1.25rem;
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 200ms;
+          }.radio-container {
     position: relative;
     margin-right: 0.5rem;
     display: flex;
