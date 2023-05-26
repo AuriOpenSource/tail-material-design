@@ -1,5 +1,5 @@
 <script>
-	import { InputRadio, Button, InputRadioGroup } from "$lib/components";
+	import { InputRadio, Button, InputRadioGroup } from '$lib/components';
 </script>
 
 <svelte:head>
@@ -99,15 +99,52 @@
 	</InputRadioGroup>
 </form>
 
-<form>
-	<fieldset>
+<form class="flex flex-col gap-2">
+	<label class="flex flex-row gap-2 items-center">
 		<div class="checkbox-container">
-			<input id="item1" type="checkbox" class="checkbox" />
-			<label for="item1">item1</label>
+			<input class="checkbox-input" type="checkbox" />
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M 4.83 13.41 L 9 17.585 L 19.59 7"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.41"
+				/>
+			</svg>
+			<div class="checkbox-layer" />
 		</div>
+		<span>unchecked</span>
+	</label>
+
+	<label class="flex flex-row gap-2 items-center">
 		<div class="checkbox-container">
-			<input id="item2" type="checkbox" class="checkbox" />
-			<label for="item2">item2</label>
+			<input class="checkbox-input" type="checkbox" checked />
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M 4.83 13.41 L 9 17.585 L 19.59 7"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.41"
+				/>
+			</svg>
+			<div class="checkbox-layer" />
 		</div>
-	</fieldset>
+		<span>checked</span>
+	</label>
+
+	<label class="flex flex-row gap-2 items-center">
+		<div class="checkbox-container">
+			<input class="checkbox-input" type="checkbox" checked disabled />
+			<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M 4.83 13.41 L 9 17.585 L 19.59 7"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.41"
+				/>
+			</svg>
+			<div class="checkbox-layer" />
+		</div>
+		<span>checked</span>
+	</label>
 </form>

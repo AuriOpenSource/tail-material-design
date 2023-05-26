@@ -1,7 +1,7 @@
 <div class="flex gap-2 flex-wrap mb-2">
-	<button disabled class="btn filled">click me</button>
-	<button class="btn filled">click me</button>
-	<button class="btn icon-left outlined">
+	<button disabled class="btn btn-filled">click me</button>
+	<button class="btn btn-filled">click me</button>
+	<button class="btn icon-left btn-outlined">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			height="24px"
@@ -14,7 +14,7 @@
 		>
 		click me
 	</button>
-	<button class="btn icon-full outlined">
+	<button class="btn icon-full btn-outlined">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			height="24px"
@@ -26,7 +26,7 @@
 			/></svg
 		>
 	</button>
-	<button class="btn icon-full filled">
+	<button class="btn icon-full btn-filled">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			height="24px"
