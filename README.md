@@ -105,10 +105,10 @@ Tail Material Design provides a growing collection of Material Design components
     - ❌ Snackbar
 - Containment
     - ❌ Bottom Sheet
-    - ❌ Cards
+    - 👍 Cards
     - ❌ Carousel
     - ❌ Dialogs
-    - ❌ Dividers
+    - 👍 Dividers
     - 👍 Lists
     - ❌ Side Sheets
     - ❌ Tooltips
@@ -121,12 +121,12 @@ Tail Material Design provides a growing collection of Material Design components
     - ❌ Tabs
     - ❌ Top App Bar
 - Selection
-    - ❌ Checkbox
-    - ❌ Chips
+    - 👍 Checkbox
+    - 👍 Chips
     - ❌ Date Pickers
     - ❌ Menus
-    - ❌ Radio Buttons
-    - ❌ Sliders
+    - 👍 Radio Buttons
+    - 👍 Sliders
     - ❌ Switch
 - Text Inputs
     - ❌ Text Fields
