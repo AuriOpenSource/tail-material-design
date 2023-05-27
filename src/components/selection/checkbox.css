@@ -1,0 +1,95 @@
+.checkbox {
+    &-container {
+        @apply relative inline-flex;
+
+        & svg {
+            color: rgb(var(--color-on-primary));
+            @apply w-full h-full;
+
+            & path {
+                stroke-dasharray: 20.874 20.874;
+                @apply opacity-0 transition-all duration-200;
+            }
+        }
+    }
+
+    &-layer,
+    &-container svg {
+        @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-200
+    }
+
+    &-input {
+        --color: var(--color-on-surface-variant);
+        @apply w-[1.125rem] h-[1.125rem] appearance-none m-0;
+
+        &::before {
+            content: " ";
+            background-clip: content-box;
+            border: solid .125rem rgb(var(--color));
+            @apply w-[1.125rem] h-[1.125rem] rounded-sm inline-block transition-all duration-200;
+        }
+
+        &:focus-visible {
+            --color: var(--color-on-surface);
+        }
+
+        &:checked::before {
+            background-color: rgb(var(--color));
+        }
+
+        &:checked+svg>path {
+            animation: check 400ms;
+            @apply opacity-100;
+        }
+
+        &:disabled::before {
+            color: rgb(var(--color-on-surface) / 0.38);
+        }
+
+        &:disabled+svg {
+            color: rgb(var(--color-on-surface));
+        }
+
+    }
+
+    &-layer {
+        --color: var(--color-on-surface-variant);
+        -webkit-tap-highlight-color: transparent;
+        @apply w-10 h-10 rounded-[3rem] cursor-pointer;
+    }
+
+    &-input:active~&-layer,
+    &-input:focus-visible~&-layer {
+        background-color: rgb(var(--color) / .12);
+    }
+
+    &-input:checked::before,
+    &-input:checked~&-layer {
+        --color: var(--color-primary);
+    }
+
+    &-input:disabled~&-layer {
+        display: none;
+    }
+
+    @keyframes check {
+        0% {
+            stroke-dashoffset: 20.874;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+}
+
+@media(hover:hover) {
+    .checkbox-input:hover {
+        --color: var(--color-on-surface);
+
+        ~.checkbox-layer {
+            --color: var(--color-on-surface);
+            background-color: rgb(var(--color) / 0.08);
+        }
+    }
+}

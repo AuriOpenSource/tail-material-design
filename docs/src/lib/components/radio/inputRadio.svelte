@@ -9,7 +9,6 @@
 </script>
 
 <div class="radio-container">
-    <input class={secondary ? "radio-input secondary" : "radio-input"} {checked} id={id} {name} type="radio" />
+    <input class="{secondary ? "radio-input-secondary" : "radio-input-primary"} radio-input" {checked} id={id} {name} type="radio" />
     <label for={id}>{label}</label>
-    <!-- <div class="radio-layer" /> -->
 </div>

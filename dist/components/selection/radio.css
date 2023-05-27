@@ -1,0 +1,66 @@
+.radio-container {
+    position: relative;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+  .radio-group.row {
+    display: inline-flex;
+}
+  .radio-input {
+    --tw-border-opacity: 1;
+    border-color: rgb(var(--color-primary) / var(--tw-border-opacity));
+    margin: 0.25rem;
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 9999px;
+    border-width: 2px;
+    padding: 0.5rem;
+  }
+  .radio-input:checked {
+      content: "";
+      background-clip: content-box;
+      animation: dilatedRadio 350ms cubic-bezier(0.254, 0.029, 0, 1.2);
+      height: 1.25rem;
+      width: 1.25rem;
+      border-radius: 9999px;
+      padding: 0.18rem;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+  .radio-input-primary {
+      --tw-border-opacity: 1;
+      border-color: rgb(var(--color-primary) / var(--tw-border-opacity));
+    }
+  .radio-input-primary:checked {
+        border-color: rgb(var(--color-primary));
+        background-color: rgb(var(--color-primary));
+      }
+  .radio-input-secondary {
+      --tw-border-opacity: 1;
+      border-color: rgb(var(--color-secondary) / var(--tw-border-opacity));
+      background-color: transparent;
+    }
+  .radio-input-secondary:checked {
+        border-color: rgb(var(--color-on-primary));
+        background-color: rgb(var(--color-on-primary));
+      }
+
+@keyframes dilatedRadio {
+  10% {
+    padding: 0.5rem;
+  }
+
+  50% {
+    padding: 0.09rem;
+  }
+
+  100% {
+    padding: 0.18rem;
+  }
+}
