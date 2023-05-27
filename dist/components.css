@@ -410,7 +410,85 @@ li {
             --color: var(--color-on-surface);
             background-color: rgb(var(--color) / 0.08);
         }
-}.radio-container {
+}.chips {
+  background-color: rbg(var(--color-surface));
+  color: rgb(var(--color-on-surface-variant));
+  border: solid 1px rgb(var(--color-outline));
+  position: relative;
+  display: inline-flex;
+  height: 2rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+  .chips svg {
+  height: 18px;
+  width: 18px;
+}
+
+  .chips button {
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    border-style: none;
+    background-color: transparent;
+    color: inherit;
+  }
+
+  .chips button:disabled {
+      cursor: auto;
+    }
+
+  .chips-layer {
+  position: absolute;
+  inset: 0px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+  .chips-content {
+  gap: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+  .chips-selected {
+    background-color: rgb(var(--color-secondary-container));
+    color: rgb(var(--color-on-secondary-container));
+    border-color: transparent;
+  }
+
+  .chips-disabled {
+    box-shadow: none;
+    border-color: rgb(var(--color-on-surface) / 0.12);
+    color: rgb(var(--color-on-surface) / 0.38);
+  }
+
+  .chips-assist {
+    color: rgb(var(--color-on-surface));
+  }
+
+  .chips-assist :not(.chips-disabled) svg {
+      color: rgb(var(--color-primary));
+    }
+
+  .chips-input .chips-content {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+@media (hover: hover) {
+  .chips-selected:hover:not(.chips-disabled) {
+    box-shadow: var(--m3-util-elevation-1);
+  }
+}
+.radio-container {
     position: relative;
     margin-right: 0.5rem;
     display: flex;
@@ -474,5 +552,149 @@ li {
 
   100% {
     padding: 0.18rem;
+  }
+}.slider {
+    position: relative;
+    display: inline-flex;
+    height: 2.5rem;
+    min-width: 10rem;
+    align-items: center;
+}
+
+  .slider-input {
+    width: calc(100% + 1rem);
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    left: -0.5rem;
+    margin: 0px;
+    height: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    opacity: 0;
+  }
+
+  .slider-track {
+    background-color: rgb(var(--color-surface-variant));
+    pointer-events: none;
+    height: 0.25rem;
+    width: 100%;
+    border-radius: 0.25rem;
+  }
+
+  .slider-track::before {
+      content: " ";
+      width: var(--percent);
+      background-color: rgb(var(--color-primary));
+      position: absolute;
+      display: inline-block;
+      height: 0.25rem;
+      border-radius: 0.25rem;
+    }
+
+  .slider-tick {
+    background-color: rgb(var(--color-on-surface-variant) / 0.38);
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 2px;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    border-radius: 2px;
+  }
+
+  .slider-thumb {
+    left: calc(var(--percent) - 0.625rem);
+    background-color: rgb(var(--color-primary));
+    pointer-events: none;
+    position: absolute;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 1.25rem;
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .slider-layer {
+    left: calc(var(--percent) - 1.25rem);
+    pointer-events: none;
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 1.25rem;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+  .slider-value {
+    left: calc(var(--percent) - 0.875rem);
+    background-color: rgb(var(--color-primary));
+    color: rgb(var(--color-on-primary));
+    border-radius: 1.75rem 1.75rem 0 1.75rem;
+    pointer-events: none;
+    position: absolute;
+    top: -1.75rem;
+    display: inline-flex;
+    height: 1.75rem;
+    width: 1.75rem;
+    --tw-rotate: 45deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+  .slider-value > span {
+    display: inline-block;
+    --tw-rotate: -45deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+  .slider-show-value > .slider-input:hover ~ .slider-value,
+  .slider-show-value > .slider-input:focus-visible ~ .slider-value,
+  .slider-show-value > .slider-input:active ~ .slider-value {
+    opacity: 1;
+  }
+
+  .slider-input:disabled {
+    cursor: auto;
+}
+
+  .slider-input:disabled + .slider-track {
+      background-color: rgb(var(--color-on-surface) / 0.12);
+    }
+
+  .slider-input:disabled + .slider-track::before {
+        background-color: rgb(var(--color-on-surface) / 0.38);
+      }
+
+  .slider-input:disabled ~ .slider-thumb {
+      background-color: rgb(var(--color-on-surface) / 0.38);
+      box-shadow: none;
+    }
+
+  .slider-input:disabled ~ .slider-layer {
+      display: none;
+    }
+
+  .slider-input:disabled ~ .slider-value {
+      background-color: rgb(var(--color-outline));
+      color: rgb(var(--color-on-background));
+    }
+
+  .slider-input:focus-visible ~ .slider-layer,
+  .slider-input:active ~ .slider-layer {
+    background-color: rgb(var(--color-primary) / 0.12);
+  }
+
+@media (hover: hover) {
+  .slider-input:hover ~ .slider-layer {
+    background-color: rgb(var(--color-primary) / 0.08);
   }
 }
