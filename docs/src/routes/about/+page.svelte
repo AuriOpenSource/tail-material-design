@@ -1,5 +1,8 @@
 <script>
 	import { InputRadio, Button, InputRadioGroup } from '$lib/components';
+	import Slider from '$lib/components/Slider.svelte';
+
+	let chipSelected = false;
 </script>
 
 <svelte:head>
@@ -148,3 +151,43 @@
 		<span>checked</span>
 	</label>
 </form>
+
+<div class="my-4 inline-flex gap-2">
+	<div class="chips">
+		<div class="chips-layer" />
+		<button class="chips-content"> movies </button>
+	</div>
+
+	<div class="chips chips-assist">
+		<div class="chips-layer" />
+		<button class="chips-content"> assist </button>
+	</div>
+
+	<div class="chips chips-input">
+		<div class="chips-layer" />
+		<button class="chips-content"> input </button>
+	</div>
+
+	<div class="chips chips-filter">
+		<div class="chips-layer" />
+		<button class="chips-content"> filter </button>
+	</div>
+
+	<div class="chips chips-suggestion {chipSelected ? 'chips-selected' : ''}">
+		<div class="chips-layer" />
+		<button on:click={() => (chipSelected = !chipSelected)} class="chips-content">
+			suggestion
+		</button>
+	</div>
+
+	<div class="chips chips-disabled">
+		<div class="chips-layer" />
+		<button class="chips-content"> disabled </button>
+	</div>
+</div>
+
+<div class="my-4 flex flex-col gap-10">
+	<Slider value={30} />
+	<Slider value={50} accuracy="ticks" step={10}/>
+	<Slider value={70} accuracy="ticks" disabled/>
+</div>
