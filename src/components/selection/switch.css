@@ -1,0 +1,98 @@
+.switch {
+  @apply inline-flex relative;
+
+  &-input {
+    outline: solid 2px rgb(var(--color-outline));
+    outline-offset: -2px;
+    background-color: rgb(var(--color-surface-variant));
+    @apply appearance-none w-[3.25rem] h-8 m-0 rounded-[2rem] cursor-pointer relative transition-all duration-300;
+
+    &:disabled {
+      background-color: rgb(var(--color-surface-variant) / 0.12);
+      outline-color: rgb(var(--color-outline) / 0.12);
+      cursor: auto;
+    }
+
+    &:checked {
+      outline-color: transparent !important;
+    }
+    
+    &:disabled:checked {
+      background-color: rgb(var(--color-on-surface) / 0.12);
+    }
+
+    &:enabled:checked {
+      background-color: rgb(var(--color-primary));
+    }
+
+    &::before {
+      content: " ";
+      background-color: rgb(var(--color-outline));
+      @apply w-4 h-4 rounded-[1rem] inline-block absolute left-2 top-1/2 transform -translate-y-1/2 transition-all duration-300;
+    }
+    &:checked::before {
+      background-color: rgb(var(--color-on-primary));
+      left: calc(100% - 1.5rem - 0.25rem);
+      @apply w-6 h-6;
+    }
+    &:disabled::before {
+      background-color: rgb(var(--color-on-surface) / 0.38);
+    }
+    &:disabled:checked:before {
+      background-color: rgb(var(--color-surface));
+    }
+  }
+
+  &-layer {
+    -webkit-tap-highlight-color: transparent;
+    @apply absolute -left-2 top-1/2 w-[3rem] h-[3rem] rounded-[3rem] transition-all duration-200 transform -translate-y-1/2 cursor-pointer;
+  }
+
+  &-input:checked + &-layer {
+    left: calc(100% - 1.5rem - 0.75rem - 0.25rem);
+  }
+
+  &-input:hover + &-layer {
+    background-color: rgb(var(--color-on-surface) / 0.08);
+  }
+  &-input:checked:hover + &-layer {
+    background-color: rgb(var(--color-primary) / 0.08);
+  }
+  &-input:enabled:is(:hover, :focus-visible)::before {
+    background-color: rgb(var(--color-on-surface-variant));
+  }
+  &-input:enabled:checked:is(:hover, :focus-visible)::before {
+    background-color: rgb(var(--color-primary-container));
+  }
+  &-input:focus-visible + &-layer,
+  &-layer:active {
+    background-color: rgb(var(--color-on-surface) / 0.12);
+  }
+  &-input:focus-visible:checked + &-layer,
+  &-input:checked + &-layer:active {
+    background-color: rgb(var(--color-primary) / 0.12);
+  }
+
+  &:active input:enabled:before {
+    background-color: rgb(var(--color-on-surface-variant));
+    @apply w-7 h-7 left-0;
+  }
+  &:active input:enabled:checked::before {
+    left: calc(100% - 1.75rem - 0.125rem);
+    background-color: rgb(var(--color-primary-container));
+  }
+
+  & > svg {
+    color: rgb(var(--color-surface-variant));
+    @apply absolute left-[0.625rem] top-1/2 transform -translate-y-1/2 w-4 h-4 opacity-0 pointer-events-none transition-all duration-300;
+  }
+  & > :checked ~ svg {
+    left: calc(100% - 1rem - 0.5rem);
+    color: rgb(var(--color-on-primary-container));
+    opacity: 1;
+  }
+
+  &-input:disabled + &-layer {
+    display: none;
+  }
+}
