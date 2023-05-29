@@ -1,6 +1,7 @@
 <script>
 	import { InputRadio, Button, InputRadioGroup } from '$lib/components';
 	import Slider from '$lib/components/Slider.svelte';
+	import Switch from '$lib/components/Switch.svelte';
 
 	let chipSelected = false;
 </script>
@@ -190,4 +191,11 @@
 	<Slider value={30} />
 	<Slider value={50} accuracy="ticks" step={10}/>
 	<Slider value={70} accuracy="ticks" disabled/>
+</div>
+
+<div class="my-4 flex flex-col gap-10">
+	<div class="">
+		<Switch checked />
+	</div>
+	<Switch />
 </div>
