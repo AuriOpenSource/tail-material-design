@@ -1,162 +1,156 @@
 .switch {
-  position: relative;
-  display: inline-flex;
+    position: relative;
+    display: inline-flex;
 }
 
-.switch-input {
-  outline: solid 2px rgb(var(--color-outline));
-  outline-offset: -2px;
-  background-color: rgb(var(--color-surface-variant));
-  position: relative;
-  margin: 0px;
-  height: 2rem;
-  width: 3.25rem;
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 2rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
+  .switch-input {
+    background-color: rgb((var(--color-surface-variant)));
+    outline: solid 2px rgb(var(--color-outline));
+    outline-offset: -2px;
+    position: relative;
+    margin: 0px;
+    height: 2rem;
+    width: 3.25rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 2rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
 
-.switch-input:disabled {
-  background-color: rgb(var(--color-surface-variant) / 0.12);
-  outline-color: rgb(var(--color-outline) / 0.12);
-  cursor: auto;
-}
+  .switch-input:disabled {
+      background-color: rgb(var(--color-surface-variant) / 0.12);
+      outline-color: rgb(var(--color-outline) / 0.12);
+      cursor: auto;
+    }
 
-.switch-input:checked {
-  outline-color: transparent !important;
-}
+  .switch-input:checked {
+      outline-color: transparent !important;
+    }
 
-.switch-input:disabled:checked {
-  background-color: rgb(var(--color-on-surface) / 0.12);
-}
+  .switch-input:disabled:checked {
+      background-color: rgb(var(--color-on-surface) / 0.12);
+    }
 
-.switch-input:enabled:checked {
-  background-color: rgb(var(--color-primary));
-}
+  .switch-input:enabled:checked {
+      background-color: rgb(var(--color-primary));
+    }
 
-.switch-input::before {
-  content: " ";
-  background-color: rgb(var(--color-outline));
-  position: absolute;
-  left: 0.5rem;
-  top: 50%;
-  display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  border-radius: 1rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
+  .switch-input::before {
+      content: " ";
+      background-color: rgb(var(--color-outline));
+      position: absolute;
+      left: 0.5rem;
+      top: 50%;
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      --tw-translate-y: -50%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      border-radius: 1rem;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+    }
 
-.switch-input:checked::before {
-  background-color: rgb(var(--color-on-primary));
-  left: calc(100% - 1.5rem - 0.25rem);
-  height: 1.5rem;
-  width: 1.5rem;
-}
+  .switch-input:checked::before {
+      background-color: rgb(var(--color-on-primary));
+      left: calc(100% - 1.5rem - 0.25rem);
+      height: 1.5rem;
+      width: 1.5rem;
+    }
 
-.switch-input:disabled::before {
-  background-color: rgb(var(--color-on-surface) / 0.38);
-}
+  .switch-input:disabled::before {
+      background-color: rgb(var(--color-on-surface) / 0.38);
+    }
 
-.switch-input:disabled:checked:before {
-  background-color: rgb(var(--color-surface));
-}
+  .switch-input:disabled:checked:before {
+      background-color: rgb(var(--color-surface));
+    }
 
-.switch-layer {
-  -webkit-tap-highlight-color: transparent;
-  position: absolute;
-  left: -0.5rem;
-  top: 50%;
-  height: 3rem;
-  width: 3rem;
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  cursor: pointer;
-  border-radius: 3rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-}
+  .switch-layer {
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    height: 3rem;
+    width: 3rem;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    cursor: pointer;
+    border-radius: 3rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
 
-.switch-input:checked + .switch-layer {
-  left: calc(100% - 1.5rem - 0.75rem - 0.25rem);
-}
+  .switch-input:checked + .switch-layer {
+    left: calc(100% - 1.5rem - 0.75rem - 0.25rem);
+  }
 
-.switch-input:hover + .switch-layer {
-  background-color: rgb(var(--color-on-surface) / 0.08);
-}
+  .switch-input:hover + .switch-layer {
+    background-color: rgb(var(--color-on-surface) / 0.08);
+  }
 
-.switch-input:checked:hover + .switch-layer {
-  background-color: rgb(var(--color-primary) / 0.08);
-}
+  .switch-input:checked:hover + .switch-layer {
+    background-color: rgb(var(--color-primary) / 0.08);
+  }
 
-.switch-input:enabled:is(:hover, :focus-visible)::before {
-  background-color: rgb(var(--color-on-surface-variant));
-}
+  .switch-input:enabled:is(:hover, :focus-visible)::before {
+    background-color: rgb(var(--color-on-surface-variant));
+  }
 
-.switch-input:enabled:checked:is(:hover, :focus-visible)::before {
-  background-color: rgb(var(--color-primary-container));
-}
+  .switch-input:enabled:checked:is(:hover, :focus-visible)::before {
+    background-color: rgb(var(--color-primary-container));
+  }
 
-.switch-input:focus-visible + .switch-layer,
-.switch-layer:active {
-  background-color: rgb(var(--color-on-surface) / 0.12);
-}
+  .switch-input:focus-visible + .switch-layer,
+  .switch-layer:active {
+    background-color: rgb(var(--color-on-surface) / 0.12);
+  }
 
-.switch-input:focus-visible:checked + .switch-layer,
-.switch-input:checked + .switch-layer:active {
-  background-color: rgb(var(--color-primary) / 0.12);
-}
+  .switch-input:focus-visible:checked + .switch-layer,
+  .switch-input:checked + .switch-layer:active {
+    background-color: rgb(var(--color-primary) / 0.12);
+  }
 
-.switch:active input:enabled:before {
-  background-color: rgb(var(--color-on-surface-variant));
-  left: 0px;
-  height: 1.75rem;
-  width: 1.75rem;
-}
+  .switch:active input:enabled:before {
+    background-color: rgb(var(--color-on-surface-variant));
+    left: 0px;
+    height: 1.75rem;
+    width: 1.75rem;
+  }
 
-.switch:active input:enabled:checked::before {
-  left: calc(100% - 1.75rem - 0.125rem);
-  background-color: rgb(var(--color-primary-container));
-}
+  .switch:active input:enabled:checked::before {
+    left: calc(100% - 1.75rem - 0.125rem);
+    background-color: rgb(var(--color-primary-container));
+  }
 
-.switch > svg {
-  color: rgb(var(--color-surface-variant));
-  pointer-events: none;
-  position: absolute;
-  left: 0.625rem;
-  top: 50%;
-  height: 1rem;
-  width: 1rem;
-  --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  opacity: 0;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
+  .switch > svg {
+    color: rgb(var(--color-surface-variant));
+    pointer-events: none;
+    position: absolute;
+    left: 0.625rem;
+    top: 50%;
+    height: 1rem;
+    width: 1rem;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    opacity: 0;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
 
-.switch > :checked ~ svg {
-  left: calc(100% - 1rem - 0.5rem);
-  color: rgb(var(--color-on-primary-container));
-  opacity: 1;
-}
+  .switch > :checked ~ svg {
+    left: calc(100% - 1rem - 0.5rem);
+    color: rgb(var(--color-on-primary-container));
+    opacity: 1;
+  }
 
-.switch-input:disabled + .switch-layer {
-  display: none;
-}
+  .switch-input:disabled + .switch-layer {
+    display: none;
+  }

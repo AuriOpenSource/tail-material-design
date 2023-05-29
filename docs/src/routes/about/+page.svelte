@@ -194,6 +194,8 @@
 </div>
 
 <div class="my-4 flex flex-col gap-10">
-	<Switch checked />
+	<div class="">
+		<Switch checked />
+	</div>
 	<Switch />
 </div>

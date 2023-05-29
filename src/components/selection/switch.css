@@ -2,10 +2,12 @@
   @apply inline-flex relative;
 
   &-input {
+    background-color: rgb((var(--color-surface-variant)));
     outline: solid 2px rgb(var(--color-outline));
     outline-offset: -2px;
-    background-color: rgb(var(--color-surface-variant));
-    @apply appearance-none w-[3.25rem] h-8 m-0 rounded-[2rem] cursor-pointer relative transition-all duration-300;
+    @apply appearance-none w-[3.25rem] h-8 
+    m-0 rounded-[2rem] cursor-pointer relative 
+    transition-all duration-300;
 
     &:disabled {
       background-color: rgb(var(--color-surface-variant) / 0.12);

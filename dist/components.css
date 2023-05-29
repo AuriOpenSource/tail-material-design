@@ -704,9 +704,9 @@ li {
 }
 
   .switch-input {
+    background-color: rgb((var(--color-surface-variant)));
     outline: solid 2px rgb(var(--color-outline));
     outline-offset: -2px;
-    background-color: rgb(var(--color-surface-variant));
     position: relative;
     margin: 0px;
     height: 2rem;
