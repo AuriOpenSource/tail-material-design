@@ -1,0 +1,86 @@
+.bottom-sheet {
+    background-color: rgb(var(--color-surface));
+    color: rgb(var(--color-on-surface));
+    border-radius: 1.75rem 1.75rem 0 0;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    z-index: 1;
+    max-width: 40rem;
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    overflow: hidden;
+  }
+  .bottom-content {
+    background-color: rgb(var(--color-primary) / 0.05);
+    min-height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .bottom-handler {
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    cursor: grab;
+    align-items: center;
+    justify-content: center;
+}
+  .bottom-handler > button {
+      background-color: rgb(var(--color-on-surface-variant) / 0.4);
+      height: 0.25rem;
+      width: 2rem;
+      cursor: inherit;
+      border-radius: 0.25rem;
+      border-style: none;
+      padding: 0px;
+    }
+  .bottom-handler > button:focus-visible {
+        background-color: rgb(var(--color-on-surface-variant) / 0.5);
+      }
+  .bottom-handler > button:focus-visible::before {
+          content: "Press space to move bottom sheet";
+          color: rgb(var(--color-on-surface));
+          position: relative;
+          left: -19rem;
+          top: 0.5rem;
+          display: inline-block;
+          width: 40rem;
+        }
+  .bottom-handler > button:active {
+        background-color: rgb(var(--color-on-surface-variant) / 0.6);
+        cursor: grabbing;
+      }
+dialog.bottom-sheet {
+    bottom: 0px;
+    left: 0px;
+    margin-bottom: 0px;
+    transform: none;
+    border-style: none;
+    padding: 0px;
+}
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+    animation: backdropIn 400ms;
+  }
+.leaving ::backdrop {
+  animation: backdropOut 400ms !important;
+}
+@keyframes backdropIn {
+  0% {
+    background-color: rgb(0 0 0 / 0);
+  }
+  100% {
+    background-color: rgb(0 0 0 / 0.5);
+  }
+}
+@keyframes backdropOut {
+  0% {
+    background-color: rgb(0 0 0 / 0.5);
+  }
+  100% {
+    background-color: rgb(0 0 0 / 0);
+  }
+}
+.no-drag {
+  transition: all 200ms;
+}
