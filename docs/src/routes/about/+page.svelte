@@ -1,8 +1,10 @@
 <script>
 	import { InputRadio, Button, InputRadioGroup } from '$lib/components';
+	import BottomSheet from '$lib/components/BottomSheet.svelte';
 	import Slider from '$lib/components/Slider.svelte';
 	import Switch from '$lib/components/Switch.svelte';
 
+	let isHidden = false;
 	let chipSelected = false;
 </script>
 
@@ -189,8 +191,8 @@
 
 <div class="my-4 flex flex-col gap-10">
 	<Slider value={30} />
-	<Slider value={50} accuracy="ticks" step={10}/>
-	<Slider value={70} accuracy="ticks" disabled/>
+	<Slider value={50} accuracy="ticks" step={10} />
+	<Slider value={70} accuracy="ticks" disabled />
 </div>
 
 <div class="my-4 flex flex-col gap-10">
@@ -198,4 +200,13 @@
 		<Switch checked />
 	</div>
 	<Switch />
+</div>
+
+<div class="my-4 flex flex-col gap-10">
+	<button class="btn" on:click={() => (isHidden = true)}>open sheet</button>
+	{#if isHidden}
+		<BottomSheet isDialog on:close={() => (isHidden = false)}>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nemo sed repellendus. At enim architecto nam? Quasi, ipsum unde. Ratione esse autem vel. At illo vitae quibusdam tempore, repellat quis.
+		</BottomSheet>
+	{/if}
 </div>
