@@ -1,7 +1,10 @@
 <script>
 	import { InputRadio, Button, InputRadioGroup } from '$lib/components';
+	import BottomSheet from '$lib/components/BottomSheet.svelte';
 	import Slider from '$lib/components/Slider.svelte';
+	import Switch from '$lib/components/Switch.svelte';
 
+	let isHidden = false;
 	let chipSelected = false;
 </script>
 
@@ -91,15 +94,32 @@
 </div>
 
 <form>
-	<InputRadioGroup row inlineBlock>
-		<InputRadio label="Zenon" name="test" checked />
-		<InputRadio label="Mira" name="test" />
-	</InputRadioGroup>
+	<div>
+		<label class="flex gap-2 my-2 items-center" for="input-radio-test-1">
+			<InputRadio id="input-radio-test-1" name="test" checked />
+			Radio 1
+		</label>
+	</div>
+	<div>
+		<label class="flex gap-2 my-2 items-center" for="input-radio-test-2">
+			<InputRadio id="input-radio-test-2" name="test" />
+			Radio 2
+		</label>
+	</div>
 
-	<InputRadioGroup row inlineBlock>
-		<InputRadio label="Blaze" name="test2" secondary checked />
-		<InputRadio label="Vibe" name="test2" secondary />
-	</InputRadioGroup>
+	<div>
+		<label class="flex gap-2 my-2 items-center" for="input-radio-1">
+			<InputRadio disabled id="input-radio-1" name="test" checked />
+			Radio 1
+		</label>
+	</div>
+	<div>
+		<label class="flex gap-2 my-2 items-center" for="input-radio-2">
+			<InputRadio id="input-radio-2" name="test" />
+			Radio 2
+		</label>
+	</div>
+		
 </form>
 
 <form class="flex flex-col gap-2">
@@ -188,6 +208,24 @@
 
 <div class="my-4 flex flex-col gap-10">
 	<Slider value={30} />
-	<Slider value={50} accuracy="ticks" step={10}/>
-	<Slider value={70} accuracy="ticks" disabled/>
+	<Slider value={50} accuracy="ticks" step={10} />
+	<Slider value={70} accuracy="ticks" disabled />
+</div>
+
+<div class="my-4 flex flex-col gap-10">
+	<div class="">
+		<Switch checked />
+	</div>
+	<Switch />
+</div>
+
+<div class="my-4 flex flex-col gap-10">
+	<button class="btn" on:click={() => (isHidden = true)}>open sheet</button>
+	{#if isHidden}
+		<BottomSheet isDialog on:close={() => (isHidden = false)}>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nemo sed repellendus. At enim
+			architecto nam? Quasi, ipsum unde. Ratione esse autem vel. At illo vitae quibusdam tempore,
+			repellat quis.
+		</BottomSheet>
+	{/if}
 </div>
