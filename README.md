@@ -11,7 +11,7 @@ Tail Material Design is a comprehensive library that brings the power of Materia
 ![Website](https://img.shields.io/website?down_message=oh%20no&style=flat-square&up_message=up%20and%20running&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Ftail-material-design)
 ![GitHub last commit](https://img.shields.io/github/last-commit/realfakenerd/tail-material-design?style=flat-square&logo=github)
 ![GitHub contributors](https://img.shields.io/github/contributors/realfakenerd/tail-material-design?style=flat-square&logo=github)
-![Components made](https://img.shields.io/badge/components%20ready-7-yellow?style=flat-square&logo=materialdesign&labelColor=fafafa)
+![Components made](https://img.shields.io/badge/components%20ready-11-yellow?style=flat-square&logo=materialdesign&labelColor=fafafa)
 
 ## Key Features:
 - Seamless integration with Tailwind CSS.
@@ -104,7 +104,7 @@ Tail Material Design provides a growing collection of Material Design components
     - ❌ Progress Indicator
     - ❌ Snackbar
 - Containment
-    - ❌ Bottom Sheet
+    - 👍 Bottom Sheet
     - 👍 Cards
     - ❌ Carousel
     - ❌ Dialogs
@@ -127,7 +127,7 @@ Tail Material Design provides a growing collection of Material Design components
     - ❌ Menus
     - 👍 Radio Buttons
     - 👍 Sliders
-    - ❌ Switch
+    - 👍 Switch
 - Text Inputs
     - ❌ Text Fields
 
