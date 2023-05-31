@@ -9,8 +9,8 @@ export default {
     tailwindNested,
     tailwindcss("./src/components/tailwind.config.js"),
     autoprefixer,
-    cssnano({
-      preset: "default",
-    }),
+    // cssnano({
+    //   preset: "default",
+    // }),
   ],
 };
