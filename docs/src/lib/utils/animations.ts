@@ -1,6 +1,6 @@
 import type { cubicOut } from "svelte/easing";
 import type { TransitionConfig } from "svelte/transition";
-import { easeEmphasized } from "./easing";
+import { easeEmphasized } from "./easing.js";
 // Heavily inspired by crossfade from svelte/transition
 interface transitionOptions {
   delay?: number;

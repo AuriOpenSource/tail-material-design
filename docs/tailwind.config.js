@@ -9,4 +9,3 @@ export default withMaterialColors({
 }, {
   primary: '#00ff00'
 })
-
