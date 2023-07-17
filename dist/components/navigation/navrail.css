@@ -1,0 +1,70 @@
+.navrail {
+  background-color: rgb(var(--color-background));
+  z-index: 999;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.5rem;
+  padding-top: 2.75rem;
+  padding-bottom: 3.5rem;
+}
+
+  .navrail-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+  .navrail-top {
+  row-gap: 2.5rem;
+}
+
+  .navrail-center {
+  row-gap: 4rem;
+}
+
+  .navrail-bottom {
+  justify-content: space-between;
+}
+
+  .navrail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.25rem;
+  padding-bottom: 1rem;
+  padding-top: 0.75rem;
+}
+
+  .navrail-item-title {
+  height: 1rem;
+  text-transform: capitalize;
+}
+
+  .navrail-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+  .navrail-pill {
+    transition: background-color 250ms ease-in-out;
+    display: flex;
+    height: 2rem;
+    width: 4rem;
+    justify-content: center;
+    border-radius: 1rem;
+  }
+
+  .navrail-icon {
+    fill: rgb(var(--color-on-background));
+    display: flex;
+    align-items: center;
+  }
