@@ -15,7 +15,7 @@
 	let hidden = true;
 </script>
 
-<nav class="navrail" class:relative={menu}>
+<nav class="navrail hidden md:block" class:relative={menu}>
 	{#if menu || fab}
 		<section class="fill-on-surface navrail-menu">
 			{#if menu}

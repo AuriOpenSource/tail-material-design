@@ -3,6 +3,7 @@
 	import icon from '$lib/utils/icon.js';
 	import '../app.css';
 	import type { NavrailType, Routes } from '$lib/utils/types.js';
+	import BottomAppbar from '$lib/components/navigation/BottomAppbar.svelte';
 
 	const routes: Routes = [
 		{
@@ -31,7 +32,7 @@
 		}
 	];
 
-	function fab({detail}: CustomEvent<NavrailType>) {
+	function fab({ detail }: CustomEvent<NavrailType>) {
 		console.log(detail.event);
 	}
 
@@ -40,6 +41,8 @@
 
 <header class="w-[80px]">
 	<NavRail on:chosen={fab} menu fab currentPath={data.currentRoute} items={routes} />
+
+	<BottomAppbar fab items={routes} currentPath={data.currentRoute} />
 </header>
 
 <main class="flex-1">
