@@ -1,53 +1,50 @@
-<script>
-	import Header from './Header.svelte';
+<script lang="ts">
+	import NavRail from '$lib/components/navigation/NavRail.svelte';
+	import icon from '$lib/utils/icon.js';
 	import '../app.css';
+	import type { NavrailType, Routes } from '$lib/utils/types.js';
+	import BottomAppbar from '$lib/components/navigation/BottomAppbar.svelte';
+
+	const routes: Routes = [
+		{
+			name: 'Inicio',
+			href: '/',
+			icon: {
+				outline: icon.home.f,
+				filled: icon.home.o
+			}
+		},
+		{
+			name: 'Sobre',
+			href: '/b',
+			icon: {
+				outline: icon.home.f,
+				filled: icon.home.o
+			}
+		},
+		{
+			name: 'contatos',
+			href: '/c',
+			icon: {
+				outline: icon.blog,
+				filled: icon.blog
+			}
+		}
+	];
+
+	function fab({ detail }: CustomEvent<NavrailType>) {
+		console.log(detail.event);
+	}
+
+	export let data;
 </script>
 
-<div class="app">
-	<Header />
+<header class="w-[80px]">
+	<NavRail on:chosen={fab} menu fab currentPath={data.currentRoute} items={routes} />
 
-	<main class="text-red-500">
-		<slot />
-	</main>
+	<BottomAppbar fab items={routes} currentPath={data.currentRoute} />
+</header>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
-</style>
+<main class="flex-1">
+	<slot />
+</main>
