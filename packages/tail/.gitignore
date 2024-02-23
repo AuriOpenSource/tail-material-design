@@ -1,0 +1,4 @@
+node_modules/
+.wireit/
+.vscode/settings.json
+.docs/

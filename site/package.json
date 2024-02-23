@@ -1,0 +1,59 @@
+{
+	"name": "tail-site",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build && npm run package",
+		"preview": "vite preview",
+		"package": "svelte-kit sync && svelte-package && publint",
+		"prepublishOnly": "npm run package",
+		"test": "npm run test:integration && npm run test:unit",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write .",
+		"test:integration": "playwright test",
+		"test:unit": "vitest"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.test.*",
+		"!dist/**/*.spec.*"
+	],
+	"peerDependencies": {
+		"svelte": "^4.0.0"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.41.2",
+		"@sveltejs/adapter-auto": "^2.1.1",
+		"@sveltejs/kit": "^1.30.4",
+		"@sveltejs/package": "^2.2.7",
+		"@typescript-eslint/eslint-plugin": "^5.62.0",
+		"@typescript-eslint/parser": "^5.62.0",
+		"autoprefixer": "^10.4.17",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^8.10.0",
+		"eslint-plugin-svelte": "^2.35.1",
+		"postcss": "^8.4.35",
+		"prettier-plugin-svelte": "^2.10.1",
+		"publint": "^0.1.16",
+		"svelte": "^4.2.12",
+		"svelte-check": "^3.6.4",
+		"tail-material-design": "workspace:^",
+		"tailwind-material-colors": "^1.2.0",
+		"tailwindcss": "^3.4.1",
+		"tslib": "^2.6.2",
+		"typescript": "^5.3.3",
+		"vite": "^5.1.4",
+		"vitest": "^0.32.4"
+	},
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"type": "module"
+}

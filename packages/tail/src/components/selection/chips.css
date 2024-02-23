@@ -1,0 +1,59 @@
+.chips {
+	background-color: rbg(var(--color-surface));
+	color: rgb(var(--color-on-surface-variant));
+	border: solid 1px rgb(var(--color-outline));
+	@apply h-8 rounded-lg overflow-hidden transition-all duration-200 relative inline-flex;
+
+	& svg {
+		@apply w-[18px] h-[18px];
+	}
+
+	& button {
+		-webkit-tap-highlight-color: transparent;
+		@apply inline-flex items-center relative bg-transparent text-[inherit] border-none cursor-pointer;
+
+		&:disabled {
+			cursor: auto;
+		}
+	}
+
+	&-layer {
+		@apply absolute inset-0 transition-all duration-200;
+	}
+
+	&-content {
+		@apply px-4 gap-2;
+	}
+
+	&-selected {
+		background-color: rgb(var(--color-secondary-container));
+		color: rgb(var(--color-on-secondary-container));
+		@apply border-[transparent];
+	}
+
+	&-disabled {
+		box-shadow: none;
+		border-color: rgb(var(--color-on-surface) / 0.12);
+		color: rgb(var(--color-on-surface) / 0.38);
+	}
+
+	&-assist {
+		color: rgb(var(--color-on-surface));
+
+		:not(.chips-disabled) svg {
+			color: rgb(var(--color-primary));
+		}
+	}
+
+	&-input {
+		.chips-content {
+			@apply px-3;
+		}
+	}
+}
+
+@media (hover: hover) {
+	.chips-selected:hover:not(.chips-disabled) {
+		box-shadow: var(--m3-util-elevation-1);
+	}
+}

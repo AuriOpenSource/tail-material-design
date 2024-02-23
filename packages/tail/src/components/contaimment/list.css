@@ -1,0 +1,69 @@
+.list {
+	@apply flex flex-col py-2;
+
+	& > .item {
+		@apply flex gap-1 py-2 pl-6 pr-4 transition-all duration-200;
+
+		&:is(button, label):is(:focus-visible, :active) {
+			background-color: rgb(var(--color-on-surface) / 0.12);
+		}
+
+		& > .avatar {
+			@apply self-center w-10 h-10 rounded-[2.5rem];
+		}
+
+		&-body {
+			@apply flex flex-1 flex-col my-auto mx-0 overflow-hidden;
+		}
+	}
+	&-lines-1 {
+		@apply h-14;
+	}
+	&-lines-2 {
+		@apply h-[4.5rem];
+	}
+	&-lines-3 {
+		@apply h-[5.5rem] py-3;
+
+		& svg {
+			@apply self-start;
+		}
+	}
+
+	& .item:is(button) {
+		@apply border-none bg-transparent m-0 text-left;
+	}
+
+	& :is(.list-item, .trailing-icon) > svg {
+		color: rgb(var(--color-on-surface-variant));
+		@apply self-center w-6 h-6;
+	}
+
+	& > .trailing-icon {
+		color: rgb(var(--color-on-surface-variant));
+		@apply inline-flex self-center;
+	}
+
+	&-headline {
+		color: rgb(var(--color-on-surface));
+	}
+
+	&-description {
+		color: rgb(var(--color-on-surface-variant));
+	}
+
+	& :is(.list-lines-1, .list-lines-2) :is(.list-headline, .list-description) {
+		text-overflow: ellipsis;
+		@apply whitespace-nowrap overflow-hidden;
+	}
+}
+
+li {
+	display: flex;
+}
+
+@media (hover: hover) {
+	.list-item:is(button, label):hover {
+		background-color: rgb(var(--color-on-surface) / 0.12);
+	}
+}

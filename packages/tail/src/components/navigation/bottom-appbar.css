@@ -1,0 +1,23 @@
+.bottom-appbar {
+	@apply w-full flex flex-col gap-y-2 md:hidden;
+
+	&-list {
+		@apply inline-flex transition-all duration-300 fixed bottom-0 h-20 w-full;
+	}
+
+	&-item {
+		@apply flex h-20 flex-grow flex-col items-center gap-1 pb-4 pt-3;
+	}
+
+	&-title {
+		@apply order-1 h-4 flex-none flex-grow-0 self-stretch capitalize text-center;
+	}
+
+	&-pill {
+		@apply flex w-16 justify-center rounded-2xl transition-colors duration-[250ms];
+	}
+
+	&-icon {
+		@apply flex h-8 items-center;
+	}
+}

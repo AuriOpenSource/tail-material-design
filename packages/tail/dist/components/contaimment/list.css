@@ -1,0 +1,102 @@
+.list {
+			display: flex;
+			flex-direction: column;
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+}
+
+	.list > .item {
+			display: flex;
+			gap: 0.25rem;
+			padding-top: 0.5rem;
+			padding-bottom: 0.5rem;
+			padding-left: 1.5rem;
+			padding-right: 1rem;
+			transition-property: all;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			transition-duration: 200ms;
+}
+
+	.list > .item:is(button, label):is(:focus-visible, :active) {
+			background-color: rgb(var(--color-on-surface) / 0.12);
+		}
+
+	.list > .item > .avatar {
+			height: 2.5rem;
+			width: 2.5rem;
+			align-self: center;
+			border-radius: 2.5rem;
+}
+
+	.list > .item-body {
+			margin-top: auto;
+			margin-bottom: auto;
+			margin-left: 0px;
+			margin-right: 0px;
+			display: flex;
+			flex: 1 1 0%;
+			flex-direction: column;
+			overflow: hidden;
+}
+
+	.list-lines-1 {
+			height: 3.5rem;
+}
+
+	.list-lines-2 {
+			height: 4.5rem;
+}
+
+	.list-lines-3 {
+			height: 5.5rem;
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
+}
+
+	.list-lines-3 svg {
+			align-self: flex-start;
+}
+
+	.list .item:is(button) {
+			margin: 0px;
+			border-style: none;
+			background-color: transparent;
+			text-align: left;
+}
+
+	.list :is(.list-item, .trailing-icon) > svg {
+		color: rgb(var(--color-on-surface-variant));
+		height: 1.5rem;
+		width: 1.5rem;
+		align-self: center;
+	}
+
+	.list > .trailing-icon {
+		color: rgb(var(--color-on-surface-variant));
+		display: inline-flex;
+		align-self: center;
+	}
+
+	.list-headline {
+		color: rgb(var(--color-on-surface));
+	}
+
+	.list-description {
+		color: rgb(var(--color-on-surface-variant));
+	}
+
+	.list :is(.list-lines-1, .list-lines-2) :is(.list-headline, .list-description) {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+li {
+	display: flex;
+}
+
+@media (hover: hover) {
+	.list-item:is(button, label):hover {
+		background-color: rgb(var(--color-on-surface) / 0.12);
+	}
+}

@@ -1,0 +1,27 @@
+.card {
+	background-color: rgb(var(--color-surface));
+	color: rgb(var(--color-on-surface));
+	@apply flex flex-col overflow-hidden p-4 border-none transition-all
+  duration-200 rounded-xl;
+
+	&-outlined {
+		border: solid 1px rgb(var(--color-outline));
+	}
+
+	&-filled {
+		background-color: rgb(var(--color-surface-variant));
+	}
+
+	&:is(button, a) {
+		text-align: inherit;
+		font: inherit;
+		-webkit-tap-highlight-color: transparent;
+		@apply cursor-pointer;
+	}
+}
+
+@media print, (force-colors: active) {
+	.card-filled {
+		outline: solid 2px;
+	}
+}
