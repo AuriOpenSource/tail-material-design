@@ -1,100 +1,22 @@
 {
-  "name": "tail-material-design",
-  "version": "0.0.12",
-  "description": "Tailwindcss plugin to add material design styles to your webapp",
-  "author": "Lucas Ouverney <realfakenerd@gmail.com> (https://dev-lucasouverney.vercel.app/)",
-  "contributors": [
-    "Roan Lopes"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/realfakenerd/tail-material-design.git"
-  },
-  "bugs": {
-    "url": "https://github.com/realfakenerd/tail-material-design/issues"
-  },
-  "main": "src/index.js",
+  "name": "tmd-monorepo",
+  "version": "1.0.0",
+  "description": "monorepo for tail-material-design",
   "scripts": {
-    "components:build": "wireit",
-    "components:merge": "wireit",
-    "components:prejss": "wireit",
-    "build:clean": "wireit",
-    "bc": "wireit",
-    "build": "wireit"
+    "format": "pnpm -r format",
+    "lint": "pnpm -r lint"
   },
-  "wireit": {
-    "bc": {
-      "files": [
-        "*"
-      ],
-      "command": "npx better-commits"
-    },
-    "components:build": {
-      "files": [
-        "src/**/*.{js,css}",
-        "src/**/postcss.config.js"
-      ],
-      "output": [
-        "dist/**"
-      ],
-      "clean": "if-file-deleted",
-      "command": "postcss --config src/components src/components/**/*.css --base src --dir dist"
-    },
-    "components:merge": {
-      "command": "cat dist/components/**/*.css > dist/components.css",
-      "clean": "if-file-deleted",
-      "files": [
-        "dist/components/*.css"
-      ],
-      "output": [
-        "dist/components.css"
-      ],
-      "dependencies": [
-        "components:build"
-      ]
-    },
-    "components:prejss": {
-      "command": "prejss-cli dist/components.css",
-      "files": [
-        "dist/components.css"
-      ],
-      "output": [
-        "dist/components.js"
-      ],
-      "clean": true,
-      "dependencies": [
-        "components:merge"
-      ]
-    },
-    "build": {
-      "dependencies": [
-        "components:prejss"
-      ]
-    },
-    "clear": {
-      "command": "rm -rf .wireit/*/cache"
-    },
-    "build:clean": {
-      "dependencies": [
-        "clear",
-        "components:prejss"
-      ]
-    }
+  "author": {
+    "name": "Lucas Ouverney",
+    "url": "https://ternary.vercel.app"
+  },
+  "packageManager": "pnpm@8.15.3",
+  "engines": {
+    "pnpm": "^8.0.0"
   },
   "type": "module",
-  "packageManager": "^pnpm@8.3.1",
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "better-commits": "^1.5.1",
-    "css-declaration-sorter": "^6.4.0",
-    "cssnano": "^6.0.1",
-    "postcss": "^8.4.24",
-    "postcss-cli": "^10.1.0",
-    "postcss-import": "^15.1.0",
-    "postcss-nested": "^6.0.1",
-    "prejss-cli": "^0.3.3",
-    "tailwindcss": "^3.3.2",
-    "wireit": "^0.9.5"
+    "prettier": "^3.2.5",
+    "turbo": "^1.12.4"
   }
 }

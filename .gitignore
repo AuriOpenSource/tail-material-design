@@ -1,4 +1,4 @@
 node_modules/
-.wireit/
 .vscode/settings.json
-.docs/
+node_modules
+.turbo
