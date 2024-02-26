@@ -1,22 +1,22 @@
 .icon-btn {
-	@apply w-10 h-10 inline-flex justify-center items-center;
+  @apply w-10 h-10 inline-flex justify-center items-center;
 
-	&-container {
-		@apply w-12 h-12 inline-flex justify-center items-center rounded-full;
-	}
+  &-container {
+    @apply w-12 h-12 inline-flex justify-center items-center rounded-full;
+  }
 
-	& svg {
-		@apply w-6 h-6;
-	}
+  & svg {
+    @apply w-6 h-6;
+  }
 
-	&-filled {
-		background-color: rgb(var(--color-surface-variant));
-		color: rgb(var(--color-primary));
+  &-filled {
+    background-color: rgb(var(--color-surface-variant));
+    color: rgb(var(--color-primary));
 
-		@apply transition-colors duration-200;
-		&:hover {
-			background-color: rgb(var(--color-primary-container));
-			color: rgb(var(--color-on-primary-container));
-		}
-	}
+    @apply transition-colors duration-200;
+    &:hover {
+      background-color: rgb(var(--color-primary-container));
+      color: rgb(var(--color-on-primary-container));
+    }
+  }
 }

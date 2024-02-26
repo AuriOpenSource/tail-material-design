@@ -1,38 +1,38 @@
 {
-	"name": "tail-material-design",
-	"version": "0.0.12",
-	"description": "Tailwindcss plugin to add material design styles to your webapp",
-	"author": "Lucas Ouverney <realfakenerd@gmail.com> (https://dev-lucasouverney.vercel.app/)",
-	"contributors": [
-		"Roan Lopes"
-	],
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/realfakenerd/tail-material-design.git"
-	},
-	"bugs": {
-		"url": "https://github.com/realfakenerd/tail-material-design/issues"
-	},
-	"main": "src/index.js",
-	"scripts": {
-		"build": "pnpm components:build && pnpm components:merge && pnpm components:prejss",
-		"components:build": "postcss --config src/components src/components/**/*.css --base src --dir dist",
-		"components:merge": "cat dist/components/**/*.css > dist/components.css",
-		"components:prejss": "prejss-cli dist/components.css",
-		"format": "prettier --plugin-search-dir . --write ."
-	},
-	"type": "module",
-	"packageManager": "^pnpm@8.3.1",
-	"devDependencies": {
-		"autoprefixer": "^10.4.17",
-		"css-declaration-sorter": "^6.4.1",
-		"cssnano": "^6.0.3",
-		"postcss": "^8.4.35",
-		"postcss-cli": "^10.1.0",
-		"postcss-import": "^15.1.0",
-		"postcss-nested": "^6.0.1",
-		"prejss-cli": "^0.3.3",
-		"tailwindcss": "^3.4.1"
-	}
+  "name": "tail-material-design",
+  "version": "0.0.12",
+  "description": "Tailwindcss plugin to add material design styles to your webapp",
+  "author": "Lucas Ouverney <realfakenerd@gmail.com> (https://dev-lucasouverney.vercel.app/)",
+  "contributors": [
+    "Roan Lopes"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realfakenerd/tail-material-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/realfakenerd/tail-material-design/issues"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "build": "pnpm components:build && pnpm components:merge && pnpm components:prejss",
+    "components:build": "postcss --config src/components src/components/**/*.css --base src --dir dist",
+    "components:merge": "cat dist/components/**/*.css > dist/components.css",
+    "components:prejss": "prejss-cli dist/components.css",
+    "format": "prettier --cache --plugin-search-dir . --write ."
+  },
+  "type": "module",
+  "packageManager": "^pnpm@8.3.1",
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "css-declaration-sorter": "^7.1.1",
+    "cssnano": "^6.0.5",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.1",
+    "postcss-nested": "^6.0.1",
+    "prejss-cli": "^0.3.3",
+    "tailwindcss": "^3.4.1"
+  }
 }

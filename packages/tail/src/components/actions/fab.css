@@ -1,45 +1,45 @@
 .fab {
-	print-color-adjust: exact;
-	-webkit-print-color-adjust: exact;
-	-webkit-tap-highlight-color: transparent;
-	@apply border-none cursor-pointer relative overflow-hidden inline-flex
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  -webkit-tap-highlight-color: transparent;
+  @apply border-none cursor-pointer relative overflow-hidden inline-flex
   items-center justify-center transition-all duration-200;
 
-	&:focus-visible .layer,
-	&:active .layer {
-		@apply opacity-[0.12];
-	}
+  &:focus-visible .layer,
+  &:active .layer {
+    @apply opacity-[0.12];
+  }
 
-	&-small {
-		@apply h-10 p-2 gap-2 rounded-lg;
-	}
+  &-small {
+    @apply h-10 p-2 gap-2 rounded-lg;
+  }
 
-	&-normal {
-		@apply h-14 p-4 gap-3 rounded-2xl;
-	}
+  &-normal {
+    @apply h-14 p-4 gap-3 rounded-2xl;
+  }
 
-	&-large {
-		@apply h-24 p-[1.875rem] gap-[1.875rem] rounded-[1.875rem];
-	}
+  &-large {
+    @apply h-24 p-[1.875rem] gap-[1.875rem] rounded-[1.875rem];
+  }
 
-	&-small,
-	&-normal {
-		& > svg {
-			@apply w-6 h-6;
-		}
-	}
+  &-small,
+  &-normal {
+    & > svg {
+      @apply w-6 h-6;
+    }
+  }
 
-	&-large > svg {
-		@apply w-10 h-10;
-	}
+  &-large > svg {
+    @apply w-10 h-10;
+  }
 }
 
 .layer {
-	@apply absolute inset-0 transition-all duration-200 opacity-0;
+  @apply absolute inset-0 transition-all duration-200 opacity-0;
 }
 
 @media (hover: hover) {
-	button:hover .layer {
-		@apply opacity-[0.08];
-	}
+  button:hover .layer {
+    @apply opacity-[0.08];
+  }
 }

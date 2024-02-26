@@ -1,34 +1,34 @@
 .card {
-	background-color: rgb(var(--color-surface));
-	color: rgb(var(--color-on-surface));
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	border-radius: 0.75rem;
-	border-style: none;
-	padding: 1rem;
-	transition-property: all;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 200ms;
+  background-color: rgb(var(--color-surface));
+  color: rgb(var(--color-on-surface));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border-style: none;
+  padding: 1rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
-	.card-outlined {
-		border: solid 1px rgb(var(--color-outline));
-	}
+  .card-outlined {
+    border: solid 1px rgb(var(--color-outline));
+  }
 
-	.card-filled {
-		background-color: rgb(var(--color-surface-variant));
-	}
+  .card-filled {
+    background-color: rgb(var(--color-surface-variant));
+  }
 
-	.card:is(button, a) {
-		text-align: inherit;
-		font: inherit;
-		-webkit-tap-highlight-color: transparent;
-		cursor: pointer;
-	}
+  .card:is(button, a) {
+    text-align: inherit;
+    font: inherit;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
 
 @media print, (force-colors: active) {
-	.card-filled {
-		outline: solid 2px;
-	}
+  .card-filled {
+    outline: solid 2px;
+  }
 }

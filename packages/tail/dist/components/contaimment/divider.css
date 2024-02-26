@@ -1,25 +1,25 @@
 .divider {
-	margin: 0px;
-	height: 0px;
-	border-style: none;
-	border-bottom: solid 1px currentColor
+  margin: 0px;
+  height: 0px;
+  border-style: none;
+  border-bottom: solid 1px currentColor
 }
 
-	.divider-middle {
-	margin-left: 1rem;
-	margin-right: 1rem
+  .divider-middle {
+  margin-left: 1rem;
+  margin-right: 1rem
 }
 
-	.divider-right {
-	margin-right: 1rem
+  .divider-right {
+  margin-right: 1rem
 }
 
-	.divider-list-inset {
-	margin-left: 1rem;
-	margin-right: 1.5rem
+  .divider-list-inset {
+  margin-left: 1rem;
+  margin-right: 1.5rem
 }
 
-	.divider.vertical-space {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem
+  .divider.vertical-space {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem
 }

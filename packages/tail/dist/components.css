@@ -1,429 +1,429 @@
 .btn {
-	-webkit-tap-highlight-color: transparent;
-	display: inline-flex;
-	height: 2.5rem;
-	flex-shrink: 0;
-	cursor: pointer;
-	align-items: center;
-	justify-content: center;
-	gap: 0.5rem;
-	overflow: hidden;
-	border-radius: 2.5rem;
-	border-style: none;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-	transition-property: all;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 200ms;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex;
+  height: 2.5rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  border-radius: 2.5rem;
+  border-style: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
-	.btn svg {
-	fill: currentColor;
+  .btn svg {
+  fill: currentColor;
 }
 
-	.btn.icon-left {
-	padding-left: 1rem;
+  .btn.icon-left {
+  padding-left: 1rem;
 }
 
-	.btn.icon-left > svg {
-	height: 18x;
-	width: 18px;
+  .btn.icon-left > svg {
+  height: 18x;
+  width: 18px;
 }
 
-	.btn.icon-full {
-	width: 2.5rem;
-	padding: 0px;
+  .btn.icon-full {
+  width: 2.5rem;
+  padding: 0px;
 }
 
-	.btn.icon-full > svg {
-	width: 1.5rem;
+  .btn.icon-full > svg {
+  width: 1.5rem;
 }
 
-	.btn:disabled {
-		--tw-bg-opacity: 0.12;
-		--tw-text-opacity: 0.38;
-		background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
-		color: rgb(var(--color-on-primary) / var(--tw-text-opacity));
-		cursor: auto;
-	}
+  .btn:disabled {
+    --tw-bg-opacity: 0.12;
+    --tw-text-opacity: 0.38;
+    background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
+    color: rgb(var(--color-on-primary) / var(--tw-text-opacity));
+    cursor: auto;
+  }
 
-	.btn-outlined {
-	background-color: transparent;
-	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-	box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-	--tw-ring-color: rgb(var(--color-on-surface) / 0.1);
+  .btn-outlined {
+  background-color: transparent;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-color: rgb(var(--color-on-surface) / 0.1);
 }
 
-	@media (hover: hover) {
-			.btn .btn-filled:hover {
-				--tw-bg-opacity: 0.7;
-			}
+  @media (hover: hover) {
+      .btn .btn-filled:hover {
+        --tw-bg-opacity: 0.7;
+      }
 
-			.btn .btn-outlined:hover {
-		--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-		--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-		box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-	}
-	}
+      .btn .btn-outlined:hover {
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+  }
 
 .btn:not(:disabled).btn-filled {
-		--tw-bg-opacity: 1;
-		--tw-text-opacity: 1;
-		background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
-		color: rgb(var(--color-on-primary) / var(--tw-text-opacity));
-	}
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+    background-color: rgb(var(--color-primary) / var(--tw-bg-opacity));
+    color: rgb(var(--color-on-primary) / var(--tw-text-opacity));
+  }
 
 .btn:not(:disabled).btn-outlined {
-	color: rgb(var(--color-on-primary));
-	--tw-ring-color: rgb(var(--color-outline));
+  color: rgb(var(--color-on-primary));
+  --tw-ring-color: rgb(var(--color-outline));
 }
 .fab {
-	print-color-adjust: exact;
-	-webkit-print-color-adjust: exact;
-	-webkit-tap-highlight-color: transparent;
-	position: relative;
-	display: inline-flex;
-	cursor: pointer;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
-	border-style: none;
-	transition-property: all;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 200ms;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-style: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
-	.fab:focus-visible .layer,
-	.fab:active .layer {
-	opacity: 0.12;
+  .fab:focus-visible .layer,
+  .fab:active .layer {
+  opacity: 0.12;
 }
 
-	.fab-small {
-	height: 2.5rem;
-	gap: 0.5rem;
-	border-radius: 0.5rem;
-	padding: 0.5rem;
+  .fab-small {
+  height: 2.5rem;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
-	.fab-normal {
-	height: 3.5rem;
-	gap: 0.75rem;
-	border-radius: 1rem;
-	padding: 1rem;
+  .fab-normal {
+  height: 3.5rem;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
-	.fab-large {
-	height: 6rem;
-	gap: 1.875rem;
-	border-radius: 1.875rem;
-	padding: 1.875rem;
+  .fab-large {
+  height: 6rem;
+  gap: 1.875rem;
+  border-radius: 1.875rem;
+  padding: 1.875rem;
 }
 
-	.fab-small > svg, .fab-normal > svg {
-	height: 1.5rem;
-	width: 1.5rem;
+  .fab-small > svg, .fab-normal > svg {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
-	.fab-large > svg {
-	height: 2.5rem;
-	width: 2.5rem;
+  .fab-large > svg {
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 .layer {
-	position: absolute;
-	inset: 0px;
-	opacity: 0;
-	transition-property: all;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 200ms;
+  position: absolute;
+  inset: 0px;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
 @media (hover: hover) {
-	button:hover .layer {
-		opacity: 0.08;
-	}
+  button:hover .layer {
+    opacity: 0.08;
+  }
 }
 .icon-btn {
-		display: inline-flex;
-		height: 2.5rem;
-		width: 2.5rem;
-		align-items: center;
-		justify-content: center;
+    display: inline-flex;
+    height: 2.5rem;
+    width: 2.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
-	.icon-btn-container {
-		display: inline-flex;
-		height: 3rem;
-		width: 3rem;
-		align-items: center;
-		justify-content: center;
-		border-radius: 9999px;
+  .icon-btn-container {
+    display: inline-flex;
+    height: 3rem;
+    width: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
 }
 
-	.icon-btn svg {
-		height: 1.5rem;
-		width: 1.5rem;
+  .icon-btn svg {
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
-	.icon-btn-filled {
-		background-color: rgb(var(--color-surface-variant));
-		color: rgb(var(--color-primary));
-		transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 200ms;
-	}
+  .icon-btn-filled {
+    background-color: rgb(var(--color-surface-variant));
+    color: rgb(var(--color-primary));
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
 
-	.icon-btn-filled:hover {
-			background-color: rgb(var(--color-primary-container));
-			color: rgb(var(--color-on-primary-container));
-		}
+  .icon-btn-filled:hover {
+      background-color: rgb(var(--color-primary-container));
+      color: rgb(var(--color-on-primary-container));
+    }
 .bottom-sheet {
-		background-color: rgb(var(--color-surface));
-		color: rgb(var(--color-on-surface));
-		border-radius: 1.75rem 1.75rem 0 0;
-		position: fixed;
-		bottom: 0px;
-		left: 50%;
-		z-index: 1;
-		max-width: 40rem;
-		--tw-translate-x: -50%;
-		transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-		overflow: hidden;
-	}
-	.bottom-content {
-		background-color: rgb(var(--color-primary) / 0.05);
-		min-height: 100%;
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-	.bottom-handler {
-		display: flex;
-		height: 3rem;
-		width: 100%;
-		cursor: grab;
-		align-items: center;
-		justify-content: center;
+    background-color: rgb(var(--color-surface));
+    color: rgb(var(--color-on-surface));
+    border-radius: 1.75rem 1.75rem 0 0;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    z-index: 1;
+    max-width: 40rem;
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    overflow: hidden;
+  }
+  .bottom-content {
+    background-color: rgb(var(--color-primary) / 0.05);
+    min-height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .bottom-handler {
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    cursor: grab;
+    align-items: center;
+    justify-content: center;
 }
-	.bottom-handler > button {
-			background-color: rgb(var(--color-on-surface-variant) / 0.4);
-			height: 0.25rem;
-			width: 2rem;
-			cursor: inherit;
-			border-radius: 0.25rem;
-			border-style: none;
-			padding: 0px;
-		}
-	.bottom-handler > button:focus-visible {
-				background-color: rgb(var(--color-on-surface-variant) / 0.5);
-			}
-	.bottom-handler > button:focus-visible::before {
-					content: 'Press space to move bottom sheet';
-					color: rgb(var(--color-on-surface));
-					position: relative;
-					left: -19rem;
-					top: 0.5rem;
-					display: inline-block;
-					width: 40rem;
-				}
-	.bottom-handler > button:active {
-				background-color: rgb(var(--color-on-surface-variant) / 0.6);
-				cursor: grabbing;
-			}
+  .bottom-handler > button {
+      background-color: rgb(var(--color-on-surface-variant) / 0.4);
+      height: 0.25rem;
+      width: 2rem;
+      cursor: inherit;
+      border-radius: 0.25rem;
+      border-style: none;
+      padding: 0px;
+    }
+  .bottom-handler > button:focus-visible {
+        background-color: rgb(var(--color-on-surface-variant) / 0.5);
+      }
+  .bottom-handler > button:focus-visible::before {
+          content: "Press space to move bottom sheet";
+          color: rgb(var(--color-on-surface));
+          position: relative;
+          left: -19rem;
+          top: 0.5rem;
+          display: inline-block;
+          width: 40rem;
+        }
+  .bottom-handler > button:active {
+        background-color: rgb(var(--color-on-surface-variant) / 0.6);
+        cursor: grabbing;
+      }
 dialog.bottom-sheet {
-		bottom: 0px;
-		left: 0px;
-		margin-bottom: 0px;
-		transform: none;
-		border-style: none;
-		padding: 0px;
+    bottom: 0px;
+    left: 0px;
+    margin-bottom: 0px;
+    transform: none;
+    border-style: none;
+    padding: 0px;
 }
 dialog::backdrop {
-		background-color: rgb(0 0 0 / 0.5);
-		animation: backdropIn 400ms;
-	}
+    background-color: rgb(0 0 0 / 0.5);
+    animation: backdropIn 400ms;
+  }
 .leaving ::backdrop {
-	animation: backdropOut 400ms !important;
+  animation: backdropOut 400ms !important;
 }
 @keyframes backdropIn {
-	0% {
-		background-color: rgb(0 0 0 / 0);
-	}
-	100% {
-		background-color: rgb(0 0 0 / 0.5);
-	}
+  0% {
+    background-color: rgb(0 0 0 / 0);
+  }
+  100% {
+    background-color: rgb(0 0 0 / 0.5);
+  }
 }
 @keyframes backdropOut {
-	0% {
-		background-color: rgb(0 0 0 / 0.5);
-	}
-	100% {
-		background-color: rgb(0 0 0 / 0);
-	}
+  0% {
+    background-color: rgb(0 0 0 / 0.5);
+  }
+  100% {
+    background-color: rgb(0 0 0 / 0);
+  }
 }
 .no-drag {
-	transition: all 200ms;
+  transition: all 200ms;
 }
 .card {
-	background-color: rgb(var(--color-surface));
-	color: rgb(var(--color-on-surface));
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	border-radius: 0.75rem;
-	border-style: none;
-	padding: 1rem;
-	transition-property: all;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 200ms;
+  background-color: rgb(var(--color-surface));
+  color: rgb(var(--color-on-surface));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border-style: none;
+  padding: 1rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
-	.card-outlined {
-		border: solid 1px rgb(var(--color-outline));
-	}
+  .card-outlined {
+    border: solid 1px rgb(var(--color-outline));
+  }
 
-	.card-filled {
-		background-color: rgb(var(--color-surface-variant));
-	}
+  .card-filled {
+    background-color: rgb(var(--color-surface-variant));
+  }
 
-	.card:is(button, a) {
-		text-align: inherit;
-		font: inherit;
-		-webkit-tap-highlight-color: transparent;
-		cursor: pointer;
-	}
+  .card:is(button, a) {
+    text-align: inherit;
+    font: inherit;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+  }
 
 @media print, (force-colors: active) {
-	.card-filled {
-		outline: solid 2px;
-	}
+  .card-filled {
+    outline: solid 2px;
+  }
 }
 .divider {
-	margin: 0px;
-	height: 0px;
-	border-style: none;
-	border-bottom: solid 1px currentColor
+  margin: 0px;
+  height: 0px;
+  border-style: none;
+  border-bottom: solid 1px currentColor
 }
 
-	.divider-middle {
-	margin-left: 1rem;
-	margin-right: 1rem
+  .divider-middle {
+  margin-left: 1rem;
+  margin-right: 1rem
 }
 
-	.divider-right {
-	margin-right: 1rem
+  .divider-right {
+  margin-right: 1rem
 }
 
-	.divider-list-inset {
-	margin-left: 1rem;
-	margin-right: 1.5rem
+  .divider-list-inset {
+  margin-left: 1rem;
+  margin-right: 1.5rem
 }
 
-	.divider.vertical-space {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem
+  .divider.vertical-space {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem
 }
 .list {
-			display: flex;
-			flex-direction: column;
-			padding-top: 0.5rem;
-			padding-bottom: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
 }
 
-	.list > .item {
-			display: flex;
-			gap: 0.25rem;
-			padding-top: 0.5rem;
-			padding-bottom: 0.5rem;
-			padding-left: 1.5rem;
-			padding-right: 1rem;
-			transition-property: all;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			transition-duration: 200ms;
+  .list > .item {
+      display: flex;
+      gap: 0.25rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1rem;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 200ms;
 }
 
-	.list > .item:is(button, label):is(:focus-visible, :active) {
-			background-color: rgb(var(--color-on-surface) / 0.12);
-		}
+  .list > .item:is(button, label):is(:focus-visible, :active) {
+      background-color: rgb(var(--color-on-surface) / 0.12);
+    }
 
-	.list > .item > .avatar {
-			height: 2.5rem;
-			width: 2.5rem;
-			align-self: center;
-			border-radius: 2.5rem;
+  .list > .item > .avatar {
+      height: 2.5rem;
+      width: 2.5rem;
+      align-self: center;
+      border-radius: 2.5rem;
 }
 
-	.list > .item-body {
-			margin-top: auto;
-			margin-bottom: auto;
-			margin-left: 0px;
-			margin-right: 0px;
-			display: flex;
-			flex: 1 1 0%;
-			flex-direction: column;
-			overflow: hidden;
+  .list > .item-body {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 0px;
+      margin-right: 0px;
+      display: flex;
+      flex: 1 1 0%;
+      flex-direction: column;
+      overflow: hidden;
 }
 
-	.list-lines-1 {
-			height: 3.5rem;
+  .list-lines-1 {
+      height: 3.5rem;
 }
 
-	.list-lines-2 {
-			height: 4.5rem;
+  .list-lines-2 {
+      height: 4.5rem;
 }
 
-	.list-lines-3 {
-			height: 5.5rem;
-			padding-top: 0.75rem;
-			padding-bottom: 0.75rem;
+  .list-lines-3 {
+      height: 5.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
 }
 
-	.list-lines-3 svg {
-			align-self: flex-start;
+  .list-lines-3 svg {
+      align-self: flex-start;
 }
 
-	.list .item:is(button) {
-			margin: 0px;
-			border-style: none;
-			background-color: transparent;
-			text-align: left;
+  .list .item:is(button) {
+      margin: 0px;
+      border-style: none;
+      background-color: transparent;
+      text-align: left;
 }
 
-	.list :is(.list-item, .trailing-icon) > svg {
-		color: rgb(var(--color-on-surface-variant));
-		height: 1.5rem;
-		width: 1.5rem;
-		align-self: center;
-	}
+  .list :is(.list-item, .trailing-icon) > svg {
+    color: rgb(var(--color-on-surface-variant));
+    height: 1.5rem;
+    width: 1.5rem;
+    align-self: center;
+  }
 
-	.list > .trailing-icon {
-		color: rgb(var(--color-on-surface-variant));
-		display: inline-flex;
-		align-self: center;
-	}
+  .list > .trailing-icon {
+    color: rgb(var(--color-on-surface-variant));
+    display: inline-flex;
+    align-self: center;
+  }
 
-	.list-headline {
-		color: rgb(var(--color-on-surface));
-	}
+  .list-headline {
+    color: rgb(var(--color-on-surface));
+  }
 
-	.list-description {
-		color: rgb(var(--color-on-surface-variant));
-	}
+  .list-description {
+    color: rgb(var(--color-on-surface-variant));
+  }
 
-	.list :is(.list-lines-1, .list-lines-2) :is(.list-headline, .list-description) {
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-	}
+  .list :is(.list-lines-1, .list-lines-2) :is(.list-headline, .list-description) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 
 li {
-	display: flex;
+  display: flex;
 }
 
 @media (hover: hover) {
-	.list-item:is(button, label):hover {
-		background-color: rgb(var(--color-on-surface) / 0.12);
-	}
+  .list-item:is(button, label):hover {
+    background-color: rgb(var(--color-on-surface) / 0.12);
+  }
 }
 .bottom-appbar {
 
@@ -444,7 +444,7 @@ li {
     }
 }
 
-	.bottom-appbar-list {
+  .bottom-appbar-list {
 
     position: fixed;
 
@@ -463,7 +463,7 @@ li {
     transition-duration: 300ms
 }
 
-	.bottom-appbar-item {
+  .bottom-appbar-item {
 
     display: flex;
 
@@ -482,7 +482,7 @@ li {
     padding-top: 0.75rem
 }
 
-	.bottom-appbar-title {
+  .bottom-appbar-title {
 
     order: 1;
 
@@ -499,7 +499,7 @@ li {
     text-transform: capitalize
 }
 
-	.bottom-appbar-pill {
+  .bottom-appbar-pill {
 
     display: flex;
 
@@ -516,7 +516,7 @@ li {
     transition-duration: 250ms
 }
 
-	.bottom-appbar-icon {
+  .bottom-appbar-icon {
 
     display: flex;
 
@@ -525,632 +525,632 @@ li {
     align-items: center
 }
 .navrail {
-	background-color: rgb(var(--color-background));
-	z-index: 999;
-	display: flex;
-	height: 100%;
-	flex-direction: column;
-	align-items: center;
-	row-gap: 2.5rem;
-	padding-top: 2.75rem;
-	padding-bottom: 3.5rem;
+  background-color: rgb(var(--color-background));
+  z-index: 999;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.5rem;
+  padding-top: 2.75rem;
+  padding-bottom: 3.5rem;
 }
 
-	.navrail-list {
-	display: flex;
-	width: 100%;
-	flex-direction: column;
-	row-gap: 0.75rem;
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+  .navrail-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-	.navrail-top {
-	row-gap: 2.5rem;
+  .navrail-top {
+  row-gap: 2.5rem;
 }
 
-	.navrail-center {
-	row-gap: 4rem;
+  .navrail-center {
+  row-gap: 4rem;
 }
 
-	.navrail-bottom {
-	justify-content: space-between;
+  .navrail-bottom {
+  justify-content: space-between;
 }
 
-	.navrail-item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	row-gap: 0.25rem;
-	padding-bottom: 1rem;
-	padding-top: 0.75rem;
+  .navrail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.25rem;
+  padding-bottom: 1rem;
+  padding-top: 0.75rem;
 }
 
-	.navrail-item-title {
-	height: 1rem;
-	text-transform: capitalize;
+  .navrail-item-title {
+  height: 1rem;
+  text-transform: capitalize;
 }
 
-	.navrail-menu {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0.25rem;
+  .navrail-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-	.navrail-pill {
-		transition: background-color 250ms ease-in-out;
-		display: flex;
-		height: 2rem;
-		width: 4rem;
-		justify-content: center;
-		border-radius: 1rem;
-	}
+  .navrail-pill {
+    transition: background-color 250ms ease-in-out;
+    display: flex;
+    height: 2rem;
+    width: 4rem;
+    justify-content: center;
+    border-radius: 1rem;
+  }
 
-	.navrail-icon {
-		fill: rgb(var(--color-on-background));
-		display: flex;
-		align-items: center;
-	}
+  .navrail-icon {
+    fill: rgb(var(--color-on-background));
+    display: flex;
+    align-items: center;
+  }
 .checkbox-container {
-			position: relative;
-			display: inline-flex;
+      position: relative;
+      display: inline-flex;
 }
 
-		.checkbox-container svg {
-			color: rgb(var(--color-on-primary));
-			height: 100%;
-			width: 100%;
-		}
+    .checkbox-container svg {
+      color: rgb(var(--color-on-primary));
+      height: 100%;
+      width: 100%;
+    }
 
-		.checkbox-container svg path {
-				stroke-dasharray: 20.874 20.874;
-				opacity: 0;
-				transition-property: all;
-				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-				transition-duration: 200ms;
-			}
-	.checkbox-layer,
-	.checkbox-container svg {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			--tw-translate-x: -50%;
-			--tw-translate-y: -50%;
-			transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-			transition-property: all;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			transition-duration: 200ms;
+    .checkbox-container svg path {
+        stroke-dasharray: 20.874 20.874;
+        opacity: 0;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+      }
+  .checkbox-layer,
+  .checkbox-container svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      --tw-translate-x: -50%;
+      --tw-translate-y: -50%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 200ms;
 }
-	.checkbox-input {
-		--color: var(--color-on-surface-variant);
-		margin: 0px;
-		height: 1.125rem;
-		width: 1.125rem;
-		-webkit-appearance: none;
-		   -moz-appearance: none;
-		        appearance: none;
-	}
-	.checkbox-input::before {
-			content: ' ';
-			background-clip: content-box;
-			border: solid 0.125rem rgb(var(--color));
-			display: inline-block;
-			height: 1.125rem;
-			width: 1.125rem;
-			border-radius: 0.125rem;
-			transition-property: all;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			transition-duration: 200ms;
-		}
-	.checkbox-input:focus-visible {
-			--color: var(--color-on-surface);
-		}
-	.checkbox-input:checked::before {
-			background-color: rgb(var(--color));
-		}
-	.checkbox-input:checked + svg > path {
-			animation: check 400ms;
-			opacity: 1;
-		}
-	.checkbox-input:disabled::before {
-			color: rgb(var(--color-on-surface) / 0.38);
-		}
-	.checkbox-input:disabled + svg {
-			color: rgb(var(--color-on-surface));
-		}
-	.checkbox-layer {
-		--color: var(--color-on-surface-variant);
-		-webkit-tap-highlight-color: transparent;
-		height: 2.5rem;
-		width: 2.5rem;
-		cursor: pointer;
-		border-radius: 3rem;
-	}
-	.checkbox-input:active ~ .checkbox-layer,
-	.checkbox-input:focus-visible ~ .checkbox-layer {
-		background-color: rgb(var(--color) / 0.12);
-	}
-	.checkbox-input:checked::before,
-	.checkbox-input:checked ~ .checkbox-layer {
-		--color: var(--color-primary);
-	}
-	.checkbox-input:disabled ~ .checkbox-layer {
-		display: none;
-	}
-	@keyframes check {
-		0% {
-			stroke-dashoffset: 20.874;
-		}
+  .checkbox-input {
+    --color: var(--color-on-surface-variant);
+    margin: 0px;
+    height: 1.125rem;
+    width: 1.125rem;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  .checkbox-input::before {
+      content: " ";
+      background-clip: content-box;
+      border: solid 0.125rem rgb(var(--color));
+      display: inline-block;
+      height: 1.125rem;
+      width: 1.125rem;
+      border-radius: 0.125rem;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 200ms;
+    }
+  .checkbox-input:focus-visible {
+      --color: var(--color-on-surface);
+    }
+  .checkbox-input:checked::before {
+      background-color: rgb(var(--color));
+    }
+  .checkbox-input:checked + svg > path {
+      animation: check 400ms;
+      opacity: 1;
+    }
+  .checkbox-input:disabled::before {
+      color: rgb(var(--color-on-surface) / 0.38);
+    }
+  .checkbox-input:disabled + svg {
+      color: rgb(var(--color-on-surface));
+    }
+  .checkbox-layer {
+    --color: var(--color-on-surface-variant);
+    -webkit-tap-highlight-color: transparent;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+    border-radius: 3rem;
+  }
+  .checkbox-input:active ~ .checkbox-layer,
+  .checkbox-input:focus-visible ~ .checkbox-layer {
+    background-color: rgb(var(--color) / 0.12);
+  }
+  .checkbox-input:checked::before,
+  .checkbox-input:checked ~ .checkbox-layer {
+    --color: var(--color-primary);
+  }
+  .checkbox-input:disabled ~ .checkbox-layer {
+    display: none;
+  }
+  @keyframes check {
+    0% {
+      stroke-dashoffset: 20.874;
+    }
 
-		100% {
-			stroke-dashoffset: 0;
-		}
-	}
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
 
 @media (hover: hover) {
-	.checkbox-input:hover {
-		--color: var(--color-on-surface);
-	}
+  .checkbox-input:hover {
+    --color: var(--color-on-surface);
+  }
 
-		.checkbox-input:hover ~ .checkbox-layer {
-			--color: var(--color-on-surface);
-			background-color: rgb(var(--color) / 0.08);
-		}
+    .checkbox-input:hover ~ .checkbox-layer {
+      --color: var(--color-on-surface);
+      background-color: rgb(var(--color) / 0.08);
+    }
 }
 .chips {
-	background-color: rbg(var(--color-surface));
-	color: rgb(var(--color-on-surface-variant));
-	border: solid 1px rgb(var(--color-outline));
-	position: relative;
-	display: inline-flex;
-	height: 2rem;
-	overflow: hidden;
-	border-radius: 0.5rem;
-	transition-property: all;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 200ms;
+  background-color: rbg(var(--color-surface));
+  color: rgb(var(--color-on-surface-variant));
+  border: solid 1px rgb(var(--color-outline));
+  position: relative;
+  display: inline-flex;
+  height: 2rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
-	.chips svg {
-	height: 18px;
-	width: 18px;
+  .chips svg {
+  height: 18px;
+  width: 18px;
 }
 
-	.chips button {
-		-webkit-tap-highlight-color: transparent;
-		position: relative;
-		display: inline-flex;
-		cursor: pointer;
-		align-items: center;
-		border-style: none;
-		background-color: transparent;
-		color: inherit;
-	}
+  .chips button {
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    border-style: none;
+    background-color: transparent;
+    color: inherit;
+  }
 
-	.chips button:disabled {
-			cursor: auto;
-		}
+  .chips button:disabled {
+      cursor: auto;
+    }
 
-	.chips-layer {
-	position: absolute;
-	inset: 0px;
-	transition-property: all;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 200ms;
+  .chips-layer {
+  position: absolute;
+  inset: 0px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
-	.chips-content {
-	gap: 0.5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+  .chips-content {
+  gap: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-	.chips-selected {
-		background-color: rgb(var(--color-secondary-container));
-		color: rgb(var(--color-on-secondary-container));
-		border-color: transparent;
-	}
+  .chips-selected {
+    background-color: rgb(var(--color-secondary-container));
+    color: rgb(var(--color-on-secondary-container));
+    border-color: transparent;
+  }
 
-	.chips-disabled {
-		box-shadow: none;
-		border-color: rgb(var(--color-on-surface) / 0.12);
-		color: rgb(var(--color-on-surface) / 0.38);
-	}
+  .chips-disabled {
+    box-shadow: none;
+    border-color: rgb(var(--color-on-surface) / 0.12);
+    color: rgb(var(--color-on-surface) / 0.38);
+  }
 
-	.chips-assist {
-		color: rgb(var(--color-on-surface));
-	}
+  .chips-assist {
+    color: rgb(var(--color-on-surface));
+  }
 
-	.chips-assist :not(.chips-disabled) svg {
-			color: rgb(var(--color-primary));
-		}
+  .chips-assist :not(.chips-disabled) svg {
+      color: rgb(var(--color-primary));
+    }
 
-	.chips-input .chips-content {
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
+  .chips-input .chips-content {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 @media (hover: hover) {
-	.chips-selected:hover:not(.chips-disabled) {
-		box-shadow: var(--m3-util-elevation-1);
-	}
+  .chips-selected:hover:not(.chips-disabled) {
+    box-shadow: var(--m3-util-elevation-1);
+  }
 }
 .radio-container {
-		position: relative;
-		display: inline-flex;
+    position: relative;
+    display: inline-flex;
 }
-	.radio-layer {
-		--color: var(--color-on-surface-variant);
-		-webkit-tap-highlight-color: transparent;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		height: 2.5rem;
-		width: 2.5rem;
-		--tw-translate-x: -50%;
-		--tw-translate-y: -50%;
-		transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-		cursor: pointer;
-		border-radius: 3rem;
-		transition-property: all;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 200ms;
-	}
-	.radio-input {
-		--color: var(--color-on-surface-variant);
-		margin: 0px;
-		height: 1.25rem;
-		width: 1.25rem;
-		-webkit-appearance: none;
-		   -moz-appearance: none;
-		        appearance: none;
-	}
-	.radio-input::before {
-			content: ' ';
-			border: solid 2px rgb(var(--color));
-			background-color: rgb(var(--color));
-			background-clip: content-box;
-			display: inline-block;
-			height: 1.25rem;
-			width: 1.25rem;
-			border-radius: 1.25rem;
-			padding: 0.5rem;
-			transition-property: all;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			transition-duration: 200ms;
-		}
-	.radio-input:focus-visible {
-			--color: var(--color-on-surface);
-		}
-	.radio-input:checked::before {
-			padding: 3px;
-		}
-	.radio-input:disabled {
-			--color: var(--color-on-surface) / 0.38;
-		}
-	.radio-input:disabled + .radio-layer {
-				display: none;
-			}
-	.radio-input:active + .radio-layer,
-	.radio-input:focus-visible + .radio-layer {
-		background-color: rgb(var(--color) / 0.12);
-	}
-	.radio-input:checked,
-	.radio-input:checked + .radio-layer {
-		--color: var(--color-primary);
-	}
+  .radio-layer {
+    --color: var(--color-on-surface-variant);
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    --tw-translate-x: -50%;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    cursor: pointer;
+    border-radius: 3rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+  .radio-input {
+    --color: var(--color-on-surface-variant);
+    margin: 0px;
+    height: 1.25rem;
+    width: 1.25rem;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  .radio-input::before {
+      content: " ";
+      border: solid 2px rgb(var(--color));
+      background-color: rgb(var(--color));
+      background-clip: content-box;
+      display: inline-block;
+      height: 1.25rem;
+      width: 1.25rem;
+      border-radius: 1.25rem;
+      padding: 0.5rem;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 200ms;
+    }
+  .radio-input:focus-visible {
+      --color: var(--color-on-surface);
+    }
+  .radio-input:checked::before {
+      padding: 3px;
+    }
+  .radio-input:disabled {
+      --color: var(--color-on-surface) / 0.38;
+    }
+  .radio-input:disabled + .radio-layer {
+        display: none;
+      }
+  .radio-input:active + .radio-layer,
+  .radio-input:focus-visible + .radio-layer {
+    background-color: rgb(var(--color) / 0.12);
+  }
+  .radio-input:checked,
+  .radio-input:checked + .radio-layer {
+    --color: var(--color-primary);
+  }
 
 @media (hover: hover) {
-		.radio-input:hover {
-			--color: var(--color-on-surface);
-		}
+    .radio-input:hover {
+      --color: var(--color-on-surface);
+    }
 
-			.radio-input:hover + .radio-layer {
-				--color: var(--color-on-surface);
-				background-color: rgb(var(--color) / 0.08);
-			}
+      .radio-input:hover + .radio-layer {
+        --color: var(--color-on-surface);
+        background-color: rgb(var(--color) / 0.08);
+      }
 }
 .slider {
-		position: relative;
-		display: inline-flex;
-		height: 2.5rem;
-		min-width: 10rem;
-		align-items: center;
+    position: relative;
+    display: inline-flex;
+    height: 2.5rem;
+    min-width: 10rem;
+    align-items: center;
 }
 
-	.slider-input {
-		width: calc(100% + 1rem);
-		-webkit-tap-highlight-color: transparent;
-		position: absolute;
-		left: -0.5rem;
-		margin: 0px;
-		height: 100%;
-		cursor: pointer;
-		-webkit-appearance: none;
-		   -moz-appearance: none;
-		        appearance: none;
-		opacity: 0;
-	}
+  .slider-input {
+    width: calc(100% + 1rem);
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    left: -0.5rem;
+    margin: 0px;
+    height: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    opacity: 0;
+  }
 
-	.slider-track {
-		background-color: rgb(var(--color-surface-variant));
-		pointer-events: none;
-		height: 0.25rem;
-		width: 100%;
-		border-radius: 0.25rem;
-	}
+  .slider-track {
+    background-color: rgb(var(--color-surface-variant));
+    pointer-events: none;
+    height: 0.25rem;
+    width: 100%;
+    border-radius: 0.25rem;
+  }
 
-	.slider-track::before {
-			content: ' ';
-			width: var(--percent);
-			background-color: rgb(var(--color-primary));
-			position: absolute;
-			display: inline-block;
-			height: 0.25rem;
-			border-radius: 0.25rem;
-		}
+  .slider-track::before {
+      content: " ";
+      width: var(--percent);
+      background-color: rgb(var(--color-primary));
+      position: absolute;
+      display: inline-block;
+      height: 0.25rem;
+      border-radius: 0.25rem;
+    }
 
-	.slider-tick {
-		background-color: rgb(var(--color-on-surface-variant) / 0.38);
-		position: absolute;
-		top: 50%;
-		height: 2px;
-		width: 2px;
-		--tw-translate-y: -50%;
-		transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-		border-radius: 2px;
-	}
+  .slider-tick {
+    background-color: rgb(var(--color-on-surface-variant) / 0.38);
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 2px;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    border-radius: 2px;
+  }
 
-	.slider-thumb {
-		left: calc(var(--percent) - 0.625rem);
-		background-color: rgb(var(--color-primary));
-		pointer-events: none;
-		position: absolute;
-		height: 1.25rem;
-		width: 1.25rem;
-		border-radius: 1.25rem;
-		--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-		--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-	}
+  .slider-thumb {
+    left: calc(var(--percent) - 0.625rem);
+    background-color: rgb(var(--color-primary));
+    pointer-events: none;
+    position: absolute;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 1.25rem;
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
 
-	.slider-layer {
-		left: calc(var(--percent) - 1.25rem);
-		pointer-events: none;
-		position: absolute;
-		height: 2.5rem;
-		width: 2.5rem;
-		border-radius: 1.25rem;
-		transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 200ms;
-	}
+  .slider-layer {
+    left: calc(var(--percent) - 1.25rem);
+    pointer-events: none;
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 1.25rem;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
 
-	.slider-value {
-		left: calc(var(--percent) - 0.875rem);
-		background-color: rgb(var(--color-primary));
-		color: rgb(var(--color-on-primary));
-		border-radius: 1.75rem 1.75rem 0 1.75rem;
-		pointer-events: none;
-		position: absolute;
-		top: -1.75rem;
-		display: inline-flex;
-		height: 1.75rem;
-		width: 1.75rem;
-		--tw-rotate: 45deg;
-		transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-		align-items: center;
-		justify-content: center;
-		opacity: 0;
-		transition-property: opacity;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 200ms;
-	}
+  .slider-value {
+    left: calc(var(--percent) - 0.875rem);
+    background-color: rgb(var(--color-primary));
+    color: rgb(var(--color-on-primary));
+    border-radius: 1.75rem 1.75rem 0 1.75rem;
+    pointer-events: none;
+    position: absolute;
+    top: -1.75rem;
+    display: inline-flex;
+    height: 1.75rem;
+    width: 1.75rem;
+    --tw-rotate: 45deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
 
-	.slider-value > span {
-		display: inline-block;
-		--tw-rotate: -45deg;
-		transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  .slider-value > span {
+    display: inline-block;
+    --tw-rotate: -45deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-	.slider-show-value > .slider-input:hover ~ .slider-value,
-	.slider-show-value > .slider-input:focus-visible ~ .slider-value,
-	.slider-show-value > .slider-input:active ~ .slider-value {
-		opacity: 1;
-	}
+  .slider-show-value > .slider-input:hover ~ .slider-value,
+  .slider-show-value > .slider-input:focus-visible ~ .slider-value,
+  .slider-show-value > .slider-input:active ~ .slider-value {
+    opacity: 1;
+  }
 
-	.slider-input:disabled {
-		cursor: auto;
+  .slider-input:disabled {
+    cursor: auto;
 }
 
-	.slider-input:disabled + .slider-track {
-			background-color: rgb(var(--color-on-surface) / 0.12);
-		}
+  .slider-input:disabled + .slider-track {
+      background-color: rgb(var(--color-on-surface) / 0.12);
+    }
 
-	.slider-input:disabled + .slider-track::before {
-				background-color: rgb(var(--color-on-surface) / 0.38);
-			}
+  .slider-input:disabled + .slider-track::before {
+        background-color: rgb(var(--color-on-surface) / 0.38);
+      }
 
-	.slider-input:disabled ~ .slider-thumb {
-			background-color: rgb(var(--color-on-surface) / 0.38);
-			box-shadow: none;
-		}
+  .slider-input:disabled ~ .slider-thumb {
+      background-color: rgb(var(--color-on-surface) / 0.38);
+      box-shadow: none;
+    }
 
-	.slider-input:disabled ~ .slider-layer {
-			display: none;
-		}
+  .slider-input:disabled ~ .slider-layer {
+      display: none;
+    }
 
-	.slider-input:disabled ~ .slider-value {
-			background-color: rgb(var(--color-outline));
-			color: rgb(var(--color-on-background));
-		}
+  .slider-input:disabled ~ .slider-value {
+      background-color: rgb(var(--color-outline));
+      color: rgb(var(--color-on-background));
+    }
 
-	.slider-input:focus-visible ~ .slider-layer,
-	.slider-input:active ~ .slider-layer {
-		background-color: rgb(var(--color-primary) / 0.12);
-	}
+  .slider-input:focus-visible ~ .slider-layer,
+  .slider-input:active ~ .slider-layer {
+    background-color: rgb(var(--color-primary) / 0.12);
+  }
 
 @media (hover: hover) {
-	.slider-input:hover ~ .slider-layer {
-		background-color: rgb(var(--color-primary) / 0.08);
-	}
+  .slider-input:hover ~ .slider-layer {
+    background-color: rgb(var(--color-primary) / 0.08);
+  }
 }
 .switch {
-		position: relative;
-		display: inline-flex;
+    position: relative;
+    display: inline-flex;
 }
 
-	.switch-input {
-		background-color: rgb((var(--color-surface-variant)));
-		outline: solid 2px rgb(var(--color-outline));
-		outline-offset: -2px;
-		position: relative;
-		margin: 0px;
-		height: 2rem;
-		width: 3.25rem;
-		cursor: pointer;
-		-webkit-appearance: none;
-		   -moz-appearance: none;
-		        appearance: none;
-		border-radius: 2rem;
-		transition-property: all;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 300ms;
-	}
+  .switch-input {
+    background-color: rgb((var(--color-surface-variant)));
+    outline: solid 2px rgb(var(--color-outline));
+    outline-offset: -2px;
+    position: relative;
+    margin: 0px;
+    height: 2rem;
+    width: 3.25rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 2rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
 
-	.switch-input:disabled {
-			background-color: rgb(var(--color-surface-variant) / 0.12);
-			outline-color: rgb(var(--color-outline) / 0.12);
-			cursor: auto;
-		}
+  .switch-input:disabled {
+      background-color: rgb(var(--color-surface-variant) / 0.12);
+      outline-color: rgb(var(--color-outline) / 0.12);
+      cursor: auto;
+    }
 
-	.switch-input:checked {
-			outline-color: transparent !important;
-		}
+  .switch-input:checked {
+      outline-color: transparent !important;
+    }
 
-	.switch-input:disabled:checked {
-			background-color: rgb(var(--color-on-surface) / 0.12);
-		}
+  .switch-input:disabled:checked {
+      background-color: rgb(var(--color-on-surface) / 0.12);
+    }
 
-	.switch-input:enabled:checked {
-			background-color: rgb(var(--color-primary));
-		}
+  .switch-input:enabled:checked {
+      background-color: rgb(var(--color-primary));
+    }
 
-	.switch-input::before {
-			content: ' ';
-			background-color: rgb(var(--color-outline));
-			position: absolute;
-			left: 0.5rem;
-			top: 50%;
-			display: inline-block;
-			height: 1rem;
-			width: 1rem;
-			--tw-translate-y: -50%;
-			transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-			border-radius: 1rem;
-			transition-property: all;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			transition-duration: 300ms;
-		}
+  .switch-input::before {
+      content: " ";
+      background-color: rgb(var(--color-outline));
+      position: absolute;
+      left: 0.5rem;
+      top: 50%;
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      --tw-translate-y: -50%;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      border-radius: 1rem;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+    }
 
-	.switch-input:checked::before {
-			background-color: rgb(var(--color-on-primary));
-			left: calc(100% - 1.5rem - 0.25rem);
-			height: 1.5rem;
-			width: 1.5rem;
-		}
+  .switch-input:checked::before {
+      background-color: rgb(var(--color-on-primary));
+      left: calc(100% - 1.5rem - 0.25rem);
+      height: 1.5rem;
+      width: 1.5rem;
+    }
 
-	.switch-input:disabled::before {
-			background-color: rgb(var(--color-on-surface) / 0.38);
-		}
+  .switch-input:disabled::before {
+      background-color: rgb(var(--color-on-surface) / 0.38);
+    }
 
-	.switch-input:disabled:checked:before {
-			background-color: rgb(var(--color-surface));
-		}
+  .switch-input:disabled:checked:before {
+      background-color: rgb(var(--color-surface));
+    }
 
-	.switch-layer {
-		-webkit-tap-highlight-color: transparent;
-		position: absolute;
-		left: -0.5rem;
-		top: 50%;
-		height: 3rem;
-		width: 3rem;
-		--tw-translate-y: -50%;
-		transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-		cursor: pointer;
-		border-radius: 3rem;
-		transition-property: all;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 200ms;
-	}
+  .switch-layer {
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    height: 3rem;
+    width: 3rem;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    cursor: pointer;
+    border-radius: 3rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
 
-	.switch-input:checked + .switch-layer {
-		left: calc(100% - 1.5rem - 0.75rem - 0.25rem);
-	}
+  .switch-input:checked + .switch-layer {
+    left: calc(100% - 1.5rem - 0.75rem - 0.25rem);
+  }
 
-	.switch-input:hover + .switch-layer {
-		background-color: rgb(var(--color-on-surface) / 0.08);
-	}
+  .switch-input:hover + .switch-layer {
+    background-color: rgb(var(--color-on-surface) / 0.08);
+  }
 
-	.switch-input:checked:hover + .switch-layer {
-		background-color: rgb(var(--color-primary) / 0.08);
-	}
+  .switch-input:checked:hover + .switch-layer {
+    background-color: rgb(var(--color-primary) / 0.08);
+  }
 
-	.switch-input:enabled:is(:hover, :focus-visible)::before {
-		background-color: rgb(var(--color-on-surface-variant));
-	}
+  .switch-input:enabled:is(:hover, :focus-visible)::before {
+    background-color: rgb(var(--color-on-surface-variant));
+  }
 
-	.switch-input:enabled:checked:is(:hover, :focus-visible)::before {
-		background-color: rgb(var(--color-primary-container));
-	}
+  .switch-input:enabled:checked:is(:hover, :focus-visible)::before {
+    background-color: rgb(var(--color-primary-container));
+  }
 
-	.switch-input:focus-visible + .switch-layer,
-	.switch-layer:active {
-		background-color: rgb(var(--color-on-surface) / 0.12);
-	}
+  .switch-input:focus-visible + .switch-layer,
+  .switch-layer:active {
+    background-color: rgb(var(--color-on-surface) / 0.12);
+  }
 
-	.switch-input:focus-visible:checked + .switch-layer,
-	.switch-input:checked + .switch-layer:active {
-		background-color: rgb(var(--color-primary) / 0.12);
-	}
+  .switch-input:focus-visible:checked + .switch-layer,
+  .switch-input:checked + .switch-layer:active {
+    background-color: rgb(var(--color-primary) / 0.12);
+  }
 
-	.switch:active input:enabled:before {
-		background-color: rgb(var(--color-on-surface-variant));
-		left: 0px;
-		height: 1.75rem;
-		width: 1.75rem;
-	}
+  .switch:active input:enabled:before {
+    background-color: rgb(var(--color-on-surface-variant));
+    left: 0px;
+    height: 1.75rem;
+    width: 1.75rem;
+  }
 
-	.switch:active input:enabled:checked::before {
-		left: calc(100% - 1.75rem - 0.125rem);
-		background-color: rgb(var(--color-primary-container));
-	}
+  .switch:active input:enabled:checked::before {
+    left: calc(100% - 1.75rem - 0.125rem);
+    background-color: rgb(var(--color-primary-container));
+  }
 
-	.switch > svg {
-		color: rgb(var(--color-surface-variant));
-		pointer-events: none;
-		position: absolute;
-		left: 0.625rem;
-		top: 50%;
-		height: 1rem;
-		width: 1rem;
-		--tw-translate-y: -50%;
-		transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-		opacity: 0;
-		transition-property: all;
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-		transition-duration: 300ms;
-	}
+  .switch > svg {
+    color: rgb(var(--color-surface-variant));
+    pointer-events: none;
+    position: absolute;
+    left: 0.625rem;
+    top: 50%;
+    height: 1rem;
+    width: 1rem;
+    --tw-translate-y: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    opacity: 0;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
 
-	.switch > :checked ~ svg {
-		left: calc(100% - 1rem - 0.5rem);
-		color: rgb(var(--color-on-primary-container));
-		opacity: 1;
-	}
+  .switch > :checked ~ svg {
+    left: calc(100% - 1rem - 0.5rem);
+    color: rgb(var(--color-on-primary-container));
+    opacity: 1;
+  }
 
-	.switch-input:disabled + .switch-layer {
-		display: none;
-	}
+  .switch-input:disabled + .switch-layer {
+    display: none;
+  }

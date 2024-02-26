@@ -1,65 +1,65 @@
 .radio {
-	&-container {
-		@apply relative inline-flex;
-	}
+  &-container {
+    @apply relative inline-flex;
+  }
 
-	&-layer {
-		--color: var(--color-on-surface-variant);
-		-webkit-tap-highlight-color: transparent;
-		@apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[2.5rem]
+  &-layer {
+    --color: var(--color-on-surface-variant);
+    -webkit-tap-highlight-color: transparent;
+    @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[2.5rem]
     w-[2.5rem] rounded-[3rem] transition-all duration-200 cursor-pointer;
-	}
+  }
 
-	&-input {
-		--color: var(--color-on-surface-variant);
-		@apply w-5 h-5 m-0 appearance-none;
+  &-input {
+    --color: var(--color-on-surface-variant);
+    @apply w-5 h-5 m-0 appearance-none;
 
-		&::before {
-			content: ' ';
-			border: solid 2px rgb(var(--color));
-			background-color: rgb(var(--color));
-			background-clip: content-box;
-			@apply w-5 h-5 inline-block rounded-[1.25rem] transition-all
+    &::before {
+      content: " ";
+      border: solid 2px rgb(var(--color));
+      background-color: rgb(var(--color));
+      background-clip: content-box;
+      @apply w-5 h-5 inline-block rounded-[1.25rem] transition-all
       duration-200 p-2;
-		}
+    }
 
-		&:focus-visible {
-			--color: var(--color-on-surface);
-		}
+    &:focus-visible {
+      --color: var(--color-on-surface);
+    }
 
-		&:checked::before {
-			padding: 3px;
-		}
+    &:checked::before {
+      padding: 3px;
+    }
 
-		&:disabled {
-			--color: var(--color-on-surface) / 0.38;
+    &:disabled {
+      --color: var(--color-on-surface) / 0.38;
 
-			& + .radio-layer {
-				display: none;
-			}
-		}
-	}
+      & + .radio-layer {
+        display: none;
+      }
+    }
+  }
 
-	&-input:active + &-layer,
-	&-input:focus-visible + &-layer {
-		background-color: rgb(var(--color) / 0.12);
-	}
+  &-input:active + &-layer,
+  &-input:focus-visible + &-layer {
+    background-color: rgb(var(--color) / 0.12);
+  }
 
-	&-input:checked,
-	&-input:checked + &-layer {
-		--color: var(--color-primary);
-	}
+  &-input:checked,
+  &-input:checked + &-layer {
+    --color: var(--color-primary);
+  }
 }
 
 @media (hover: hover) {
-	.radio-input {
-		&:hover {
-			--color: var(--color-on-surface);
+  .radio-input {
+    &:hover {
+      --color: var(--color-on-surface);
 
-			& + .radio-layer {
-				--color: var(--color-on-surface);
-				background-color: rgb(var(--color) / 0.08);
-			}
-		}
-	}
+      & + .radio-layer {
+        --color: var(--color-on-surface);
+        background-color: rgb(var(--color) / 0.08);
+      }
+    }
+  }
 }
