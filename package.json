@@ -1,22 +1,25 @@
 {
-  "name": "tmd-monorepo",
-  "version": "1.0.0",
-  "description": "monorepo for tail-material-design",
-  "scripts": {
-    "format": "pnpm -r format",
-    "lint": "pnpm -r lint"
-  },
-  "author": {
-    "name": "Lucas Ouverney",
-    "url": "https://ternary.vercel.app"
-  },
-  "packageManager": "pnpm@8.15.3",
-  "engines": {
-    "pnpm": "^8.0.0"
-  },
-  "type": "module",
-  "devDependencies": {
-    "prettier": "^3.2.5",
-    "turbo": "^1.12.4"
-  }
+	"name": "tmd-monorepo",
+	"version": "1.0.0",
+	"private": true,
+	"description": "monorepo for tail-material-design",
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"format": "pnpm -r format",
+		"lint": "pnpm -r lint"
+	},
+	"author": {
+		"name": "Lucas Ouverney",
+		"url": "https://ternary.vercel.app"
+	},
+	"packageManager": "pnpm@8.15.3",
+	"engines": {
+		"pnpm": "^8.0.0"
+	},
+	"type": "module",
+	"devDependencies": {
+		"prettier": "^3.2.5",
+		"turbo": "^1.12.4"
+	}
 }

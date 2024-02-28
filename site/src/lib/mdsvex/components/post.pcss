@@ -1,0 +1,182 @@
+p code {
+	@apply bg-surface relative rounded px-[0.3rem] py-[0.2rem] font-mono text-label-small;
+}
+
+.code-block {
+	color: #adbac7;
+	max-height: 650px;
+	margin-block: 1.5rem;
+	border-radius: 0.5rem;
+	background-color: #22272e;
+	overflow: hidden;
+	position: relative;
+
+	.copy {
+		direction: ltr;
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		z-index: 3;
+		width: 40px;
+		height: 40px;
+		background-position: 50%;
+		background-size: 20px;
+		background-repeat: no-repeat;
+		opacity: 0;
+		border-radius: 999px;
+		transition:
+			opacity 300ms ease-in-out,
+			background-color 150ms ease-in-out,
+			box-shadow 250ms;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='rgba(128,128,128,1)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect width='8' height='4' x='8' y='2' rx='1' ry='1'/%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/%3E%3C/svg%3E");
+
+		&:hover {
+			background-color: rgb(var(--color-surface-hover));
+			@apply ring-1 ring-[currentColor];
+		}
+
+		&:active {
+			background-color: rgb(var(--color-primary) / 0.5);
+		}
+	}
+
+	&:hover .copy {
+		opacity: 1;
+	}
+
+	.lang {
+		position: absolute;
+		top: 2px;
+		right: 8px;
+		z-index: 2;
+		color: rgba(235, 235, 245, 0.38);
+		opacity: 1;
+
+		@apply text-label-medium;
+	}
+
+	&:hover .lang {
+		opacity: 0;
+	}
+}
+
+pre {
+	position: relative;
+	z-index: 1;
+	overflow-x: auto;
+	padding: 0.25rem;
+	padding-block: 1.25rem;
+
+	code {
+		display: block;
+		padding-inline: 1.5rem;
+		width: fit-content;
+		min-width: 100%;
+		counter-reset: line;
+		transition: color 500ms ease-in-out;
+
+		.line::before {
+			counter-increment: line;
+			content: counter(line);
+			display: inline-block;
+			text-align: right;
+			margin-inline: 0 1.4rem;
+		}
+	}
+}
+
+pre,
+code {
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-wrap: normal;
+	tab-size: 4;
+	hyphens: none;
+}
+
+code .diff {
+	display: inline-block;
+	margin: 0 -1.5rem;
+	padding: 0 1.5rem;
+	width: calc(100% + 48px);
+	transition: background-color 500ms ease-in-out;
+	border-left-width: 3px;
+	border-style: solid;
+
+	&::before {
+		position: absolute;
+		left: 10px;
+	}
+
+	&.remove {
+		background-color: rgb(var(--color-error) / 0.2);
+		opacity: 0.7;
+		border-color: rgb(var(--color-on-error));
+
+		&::before {
+			content: '-';
+			color: rgb(var(--color-error));
+		}
+	}
+
+	&.add {
+		background-color: rgba(34, 197, 94, 0.2);
+		border-color: rgba(34, 197, 94, 1);
+
+		&::before {
+			content: '+';
+			color: rgba(34, 197, 94, 1);
+		}
+	}
+}
+
+code .highlighted {
+	background-color: rgb(var(--color-surface-variant) / 0.5);
+	margin: 0 -1.5rem;
+	padding: 0 1.5rem;
+	width: calc(100% + 48px);
+	display: inline-block;
+	border-left-width: 3px;
+	border-style: solid;
+
+	&.error {
+		background-color: rgb(var(--color-error) / 0.2);
+		border-color: rgb(var(--color-on-error));
+
+		&::after {
+			content: '⮾';
+			color: rgb(var(--color-error));
+			padding-left: 10px;
+		}
+	}
+
+	&.warning {
+		background-color: rgb(var(--color-primary) / 0.2);
+		border-color: rgb(var(--color-primary));
+
+		&::after {
+			content: '⚠';
+			color: rgb(var(--color-primary));
+			padding-left: 10px;
+		}
+	}
+}
+
+code .tab,
+code .space {
+	position: relative;
+}
+
+code .tab::before {
+	content: '⇥';
+	position: absolute;
+	opacity: 0.3;
+}
+
+code .space::before {
+	content: '.';
+	position: absolute;
+	opacity: 0.3;
+}

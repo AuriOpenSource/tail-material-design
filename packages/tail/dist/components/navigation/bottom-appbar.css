@@ -1,24 +1,17 @@
 .bottom-appbar {
 
-
     display: flex;
-
 
     width: 100%;
 
-
     flex-direction: column;
-
 
     row-gap: 0.5rem
 }
 
-
 @media (min-width: 768px) {
 
-
     .bottom-appbar {
-
 
         display: none
     }
@@ -28,24 +21,17 @@
 
     position: fixed;
 
-
     bottom: 0px;
-
 
     display: inline-flex;
 
-
     height: 5rem;
-
 
     width: 100%;
 
-
     transition-property: all;
 
-
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 
     transition-duration: 300ms
 }
@@ -54,24 +40,17 @@
 
     display: flex;
 
-
     height: 5rem;
-
 
     flex-grow: 1;
 
-
     flex-direction: column;
-
 
     align-items: center;
 
-
     gap: 0.25rem;
 
-
     padding-bottom: 1rem;
-
 
     padding-top: 0.75rem
 }
@@ -80,21 +59,15 @@
 
     order: 1;
 
-
     height: 1rem;
-
 
     flex: none;
 
-
     flex-grow: 0;
-
 
     align-self: stretch;
 
-
     text-align: center;
-
 
     text-transform: capitalize
 }
@@ -103,21 +76,15 @@
 
     display: flex;
 
-
     width: 4rem;
-
 
     justify-content: center;
 
-
     border-radius: 1rem;
-
 
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
 
-
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 
     transition-duration: 250ms
 }
@@ -126,10 +93,7 @@
 
     display: flex;
 
-
     height: 2rem;
-
 
     align-items: center
 }
-
