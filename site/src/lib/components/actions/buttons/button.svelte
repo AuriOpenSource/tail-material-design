@@ -5,6 +5,7 @@
 	type $$Props = HTMLAttributes<HTMLButtonElement> & {
 		outlined?: boolean;
 		filled?: boolean;
+		onClick?: () => void;
 	};
 
 	let className: $$Props['class'] = '';
@@ -12,10 +13,12 @@
 
 	export let outlined = false;
 	export let filled = false;
+	export let onClick: () => void | undefined;
 </script>
 
 <button
 	{...$$restProps}
+	on:click={onClick}
 	class={cn('btn', { 'btn-filled': filled, 'btn-outlined': outlined }, className)}
 >
 	<slot />

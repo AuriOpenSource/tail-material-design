@@ -48,5 +48,8 @@
 		"vite": "^5.1.4",
 		"vitest": "^0.25.8"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"highlight.js": "^11.9.0"
+	}
 }
