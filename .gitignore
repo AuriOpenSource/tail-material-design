@@ -2,3 +2,5 @@ node_modules
 .turbo
 .vercel
 pnpm-lock.yaml
+.vscode/launch.json
+.vscode/settings.json
