@@ -19,7 +19,7 @@
 			<CodeView code={"// declare no seu script"} />
 			<CodeView code ="import &#123; Button &#125; from 'tail/actions';" />
 			<br>
-			<CodeView code="<Button>Clica em eu</Button>" />
+			<CodeView code="<Button filled>Clica em eu</Button>" />
 			
 		</div>
 	</ExampleComponent>
