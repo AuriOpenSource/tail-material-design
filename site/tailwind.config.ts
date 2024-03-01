@@ -4,6 +4,13 @@ import { colors } from 'tailwindcss/defaultTheme';
 import tail from 'tail-material-design';
 export default withMaterialColors(
 	{
+		container: {
+			center: true,
+			padding: "2rem",
+			screens: {
+				"2xl": "1400px",
+			},
+		},
 		content: ['./src/**/*.{html,js,svelte,ts}'],
 		plugins: [tail],
 		theme: {
