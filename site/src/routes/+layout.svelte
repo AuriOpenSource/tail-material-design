@@ -9,6 +9,9 @@
 	import { routes } from '$lib/utils';
 	import Icon from '@iconify/svelte';
 	import '../app.css';
+	import { enableCache } from '@iconify/svelte';
+	enableCache('all');
+
 </script>
 
 <header>
