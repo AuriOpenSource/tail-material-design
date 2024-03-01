@@ -6,7 +6,9 @@ export const load = (async () => {
 
 	for (const path in paths) {
 		const file = paths[path];
-		const slug = path.split('/').at(-1)?.replace('.md', '');
+		console.log(path.split('/'));
+		
+		const slug = path.split('/').at(-2)?.replace('.md', '');
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>;
@@ -38,4 +40,5 @@ interface Post {
 	/** is published or not */
 	draft?: string;
 	thumb: string;
+	theme: string;
 }
