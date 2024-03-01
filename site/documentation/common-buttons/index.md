@@ -1,8 +1,9 @@
 ---
-title: Build a SvelteKito blog
-description: Learn how to build a blazingly fast and extendable SvelteKit Markdown blog for poets.
+title: Common Buttons
+description: Common buttons prompt most actions in a UI
 slug: sveltekit-markdown-blog
-thumb: https://lh3.googleusercontent.com/_xZn5hGytOkZq6W9EgYkBsf6jfFgAF3dCmgcgSW0vraUcZflFGUH4uEJDUWXJTszY7NjmGNBC4-xgJmsBVqEQbjwUau8OE2W3EWUnf8MnjdvLEM9Fr7G=s0
+theme: '#3e4a36'
+thumb: https://lh3.googleusercontent.com/fBiDraZxIJW5LYve7S3RGdiBIk48r1K6TXtpJsQQnfYMiDpUwrIaDT3CNLkqoNrxUTfuBQ5lX5fGpl12bND5_pEhiZcUfV_7C345dXfCxb7kn0b7oAcT=s0
 published: '2023-04-28'
 category:
   - sveltekit
@@ -36,7 +37,11 @@ Capitalize the first letter of the first word and proper nouns in button label t
 
 You can just use the common structure, that alone can make it look like a ghost button, it adds padding, fully rounded corners and holds the label text.
 
-```svelte live async
+<div>
+  <button class="btn btn-filled">Sample</button>
+</div>
+
+```svelte
 <button class="btn">Common</button>
 ```
 
@@ -52,7 +57,7 @@ Filled buttons display a container around a text label. Container size can be de
 
 Filled buttons should have containers with a solid color.
 
-```svelte live async
+```svelte
 <button class="btn btn-filled">Filled</button>
 ```
 
@@ -63,6 +68,6 @@ primary action in an app.
 
 Outlined buttons pair well with filled buttons to indicate an alternative, secondary action.
 
-```svelte live async
+```svelte
 <button class="btn btn-outlined">Outlined</button>
 ```
