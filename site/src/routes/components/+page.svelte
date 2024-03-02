@@ -1,26 +1,19 @@
 <script lang="ts">
+	import { button } from '$lib/utils/examples';
+	import { ExampleComponent, CodeBlock } from '$lib/components/doc-component';
 	import Button from '$lib/components/actions/buttons/button.svelte';
-	import ExampleComponent from '$lib/components/doc-component/ExampleComponent.svelte';
-	import CodeView from '$lib/components/doc-component/CodeView.svelte';
 
-	const test = `
-		<script>
-			import &#123; Button &#125; from 'tail/actions';
-		&lt;/script&gt;
-	`
 </script>
 
 <div class="min-h-full flex justify-center items-center">
-	<ExampleComponent>
-		<div slot="component">
-			<Button filled>Clica em eu</Button>
+	<ExampleComponent copy={button.filled.copy}>
+		<div class="flex items-center gap-3" slot="component">
+			<Button filled>Click</Button>
 		</div>
 		<div slot="code">
-			<CodeView code={"// declare no seu script"} />
-			<CodeView code ="import &#123; Button &#125; from 'tail/actions';" />
-			<br>
-			<CodeView code="<Button filled>Clica em eu</Button>" />
-			
+			<CodeBlock lang="html">
+				{button.filled.html}
+			</CodeBlock>
 		</div>
 	</ExampleComponent>
 </div>
