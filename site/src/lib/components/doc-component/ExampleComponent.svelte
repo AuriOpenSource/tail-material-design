@@ -1,30 +1,33 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte';
 	import Button from '../actions/buttons/button.svelte';
+	import { browser } from '$app/environment';
+
+	export let copy: string;
 
 	let showCode = false;
-	let showCodeToggle = () => showCode = !showCode
+	let copied = false;
+	let copyTimeout: ReturnType<typeof setTimeout>;
+
+	let showCodeToggle = () => (showCode = !showCode);
+	let handleCodeCopy = () => {
+		if (!browser) return;
+
+		window.navigator.clipboard.writeText(copy);
+
+		copied = true;
+		clearTimeout(copyTimeout);
+		copyTimeout = setTimeout(() => copied = false, 5000);
+	};
 </script>
 
-<div
-	class="border border-gray-200 rounded-lg rounded-b-none border-primary"
->
-	<div class="flex justify-between w-full grid-cols-3 p-5 border-b bg-secondary-container rounded-lg rounded-b-none sm:grid">
-		<div class="flex items-center space-x-3 text-lg font-medium text-gray-500 dark:text-gray-400">
+<div class="border border-gray-200 rounded-lg rounded-b-none border-primary">
+	<div
+		class="flex w-full grid-cols-3 p-5 border-b bg-secondary-container rounded-lg rounded-b-none sm:grid"
+	>
+		<div class="flex items-center space-x-3 font-medium">
 			<Button class="w-44" filled onClick={showCodeToggle}>
-				<svg
-					class="w-3.5 h-3.5 mr-2"
-					aria-hidden="true"
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 20 16"
-					><path
-						stroke="currentColor"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
-					/></svg
-				>
+				<Icon icon="ph:code-bold" />
 				{#if showCode}
 					<span>Hidden Code</span>
 				{:else}
@@ -32,30 +35,36 @@
 				{/if}
 			</Button>
 		</div>
-		<div class="items-center hidden mx-auto space-x-3 lg:flex">
-			<Button>Monitor</Button>
-			<Button>Tablet</Button>
-			<Button>Phone</Button>
-		</div>
-		<div class="flex items-center col-span-2 ml-auto space-x-3 lg:col-span-1">
-			<select>
-				<option value="font">font</option>
-				<option value="font">font</option>
-				<option value="font">font</option>
-			</select>
-			<div class="relative">
-				<Button>Cor</Button>
-			</div>
-			<Button>Tema</Button>
+		<div class="items-center col-start-3 hidden mx-auto space-x-3 lg:flex">
+			<Button>
+				<Icon icon="lucide:monitor" />
+			</Button>
+			<Button>
+				<Icon icon="teenyicons:tablet-outline" />
+			</Button>
+			<Button>
+				<Icon icon="bi:phone"/>
+			</Button>
 		</div>
 	</div>
 	<div
-		class="my-10 px-10 w-full text-gray-900 border-gray-200 rounded-t-none shadow-sm sm:text-sm border-primary dark:text-white block-canvas"
+		class="relative py-10 px-10 w-full rounded-t-none sm:text-sm border-primary"
 	>
 		{#if showCode}
 			<slot name="code" />
+			<Button onClick={handleCodeCopy} class="absolute top-2 right-0">
+				<span class="flex justify-center items-center text-primary transition-all hover:bg-background-hover w-10 h-10">
+					<Icon icon="uiw:copy" width="1.2rem" height="1.2rem" />
+				</span>
+			</Button>
 		{:else}
 			<slot name="component" />
+		{/if}
+		{#if copied}
+			<div class="absolute flex items-center gap-1 bottom-3 h-4 opacity-100 animate-up left-[45%] text-primary">
+				<Icon icon="lucide:check-check" />
+				<span>Copied</span>
+			</div>
 		{/if}
 	</div>
 </div>
