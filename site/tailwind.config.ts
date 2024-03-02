@@ -11,7 +11,8 @@ export default withMaterialColors(
 				backgroundColor: { ...colors },
 				colors: { ...colors },
 				animation: {
-					slit: 'slit-vertically 500ms linear 0s 1 normal none'
+					slit: 'slit-vertically 500ms linear 0s 1 normal none',
+					up: 'up-motion 200ms'
 				},
 				keyframes: {
 					'slit-vertically': {
@@ -25,6 +26,12 @@ export default withMaterialColors(
 						},
 						'100%': {
 							transform: 'translateZ(0) rotateY(0)'
+						}
+					},
+					'up-motion': {
+						'0%': {
+							height: '0',
+							opacity: '0'
 						}
 					}
 				}
