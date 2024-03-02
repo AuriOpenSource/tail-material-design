@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { cn } from '$lib';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import type { HTMLAttributes, MouseEventHandler } from 'svelte/elements';
 
 	type $$Props = HTMLAttributes<HTMLButtonElement> & {
 		outlined?: boolean;
 		filled?: boolean;
-		onClick?: () => void;
+		onClick?: MouseEventHandler<HTMLButtonElement>; 
 	};
 
 	let className: $$Props['class'] = '';
@@ -13,7 +13,7 @@
 
 	export let outlined = false;
 	export let filled = false;
-	export let onClick: () => void | undefined;
+	export let onClick: $$Props['onClick'] = undefined;
 </script>
 
 <button
