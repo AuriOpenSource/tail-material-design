@@ -83,6 +83,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.17(postcss@8.4.35)
+      bits-ui:
+        specifier: ^0.19.3
+        version: 0.19.3(svelte@3.59.2)
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -143,6 +146,9 @@ importers:
       tailwind-merge:
         specifier: ^2.2.1
         version: 2.2.1
+      tailwind-variants:
+        specifier: ^0.2.0
+        version: 0.2.0(tailwindcss@3.4.1)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1
@@ -638,6 +644,23 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
+  /@floating-ui/core@1.6.0:
+    resolution: {integrity: sha512-PcF++MykgmTj3CIyOQbKA/hDzOAiqI3mhuoN44WRCopIs1sgoDoU4oty4Jtqaj/y3oDU6fnVSm4QG0a3t5i0+g==}
+    dependencies:
+      '@floating-ui/utils': 0.2.1
+    dev: true
+
+  /@floating-ui/dom@1.6.3:
+    resolution: {integrity: sha512-RnDthu3mzPlQ31Ss/BTwQ1zjzIhr3lk1gZB1OC56h/1vEtaXkESrOqL5fQVMfXpwGtRwX+YsZBdyHtJMQnkArw==}
+    dependencies:
+      '@floating-ui/core': 1.6.0
+      '@floating-ui/utils': 0.2.1
+    dev: true
+
+  /@floating-ui/utils@0.2.1:
+    resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
+    dev: true
+
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
@@ -669,6 +692,12 @@ packages:
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+    dev: true
+
+  /@internationalized/date@3.5.2:
+    resolution: {integrity: sha512-vo1yOMUt2hzp63IutEaTUxROdvQg1qlMRsbCvbay2AK2Gai7wIgCyK5weEX3nHkiLgo4qCXHijFNC/ILhlRpOQ==}
+    dependencies:
+      '@swc/helpers': 0.5.2
     dev: true
 
   /@isaacs/cliui@8.0.2:
@@ -715,6 +744,20 @@ packages:
 
   /@material/material-color-utilities@0.2.7:
     resolution: {integrity: sha512-0FCeqG6WvK4/Cc06F/xXMd/pv4FeisI0c1tUpBbfhA2n9Y8eZEv4Karjbmf2ZqQCPUWMrGp8A571tCjizxoTiQ==}
+    dev: true
+
+  /@melt-ui/svelte@0.75.2(svelte@3.59.2):
+    resolution: {integrity: sha512-EZYH5iEzHs/CPsWqRlH6AnJ70sTuPB4llVK3ajafWig6I5q3qyGU8NIz4aozUssL0edf9BKmyDVAy6Vksy1fbA==}
+    peerDependencies:
+      svelte: '>=3 <5'
+    dependencies:
+      '@floating-ui/core': 1.6.0
+      '@floating-ui/dom': 1.6.3
+      '@internationalized/date': 3.5.2
+      dequal: 2.0.3
+      focus-trap: 7.5.4
+      nanoid: 5.0.6
+      svelte: 3.59.2
     dev: true
 
   /@next/env@14.1.1:
@@ -1564,6 +1607,17 @@ packages:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
     dependencies:
       file-uri-to-path: 1.0.0
+    dev: true
+
+  /bits-ui@0.19.3(svelte@3.59.2):
+    resolution: {integrity: sha512-0qqZ1bwE4ZmTnzTdsl4mYEbHY5f0NVgxhddIqscLjJZx4ltkVKDXxBwEusbE2NToqKtXNNrU0wy7sLusdzdhcg==}
+    peerDependencies:
+      svelte: ^4.0.0
+    dependencies:
+      '@internationalized/date': 3.5.2
+      '@melt-ui/svelte': 0.75.2(svelte@3.59.2)
+      nanoid: 5.0.6
+      svelte: 3.59.2
     dev: true
 
   /boolbase@1.0.0:
@@ -2448,6 +2502,12 @@ packages:
 
   /flatted@3.3.1:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
+    dev: true
+
+  /focus-trap@7.5.4:
+    resolution: {integrity: sha512-N7kHdlgsO/v+iD/dMoJKtsSqs5Dz/dXZVebRgJw23LDk+jMi/974zyiOYDziY2JPp8xivq9BmUGwIJMiuSBi7w==}
+    dependencies:
+      tabbable: 6.2.0
     dev: true
 
   /foreground-child@3.1.1:
@@ -3539,6 +3599,12 @@ packages:
   /nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+    dev: true
+
+  /nanoid@5.0.6:
+    resolution: {integrity: sha512-rRq0eMHoGZxlvaFOUdK1Ev83Bd1IgzzR+WJ3IbDJ7QOSdAxYjlurSPqFs9s4lJg29RT6nPwizFtJhQS6V5xgiA==}
+    engines: {node: ^18 || >=20}
     hasBin: true
     dev: true
 
@@ -4970,6 +5036,10 @@ packages:
       picocolors: 1.0.0
     dev: true
 
+  /tabbable@6.2.0:
+    resolution: {integrity: sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==}
+    dev: true
+
   /tailwind-material-colors@1.2.0(tailwindcss@3.4.1):
     resolution: {integrity: sha512-i8Dp/rU9iOajDTuXxbLjED0pAhkHhmz7EJHZ1RdpoQsB9UIMm9u7CnQaFiS7GCZjJcCM/1Ce+QDF7EEvPlT4Mg==}
     peerDependencies:
@@ -5003,6 +5073,16 @@ packages:
       tailwindcss: ^3.1.0
     dependencies:
       color: 4.2.3
+      tailwindcss: 3.4.1
+    dev: true
+
+  /tailwind-variants@0.2.0(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-EuW5Sic7c0tzp+p5rJwAgb7398Jb0hi4zkyCstOoZPW0DWwr+EWkNtnZYEo5CjgE1tazHUzyt4oIhss64UXRVA==}
+    engines: {node: '>=16.x', pnpm: '>=7.x'}
+    peerDependencies:
+      tailwindcss: '*'
+    dependencies:
+      tailwind-merge: 2.2.1
       tailwindcss: 3.4.1
     dev: true
 
