@@ -4,4 +4,4 @@ export {
 	Root,
 	//
 	Root as Card
-}
+};

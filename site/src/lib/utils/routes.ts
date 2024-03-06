@@ -1,4 +1,4 @@
-import type {IconifyIcon} from '@iconify/svelte';
+import type { IconifyIcon } from '@iconify/svelte';
 
 interface Route {
 	label: string;
@@ -21,5 +21,5 @@ export default [
 		label: 'Components',
 		href: '/components',
 		icon: 'mdi:plus-circle'
-	},
-] satisfies Route[]
+	}
+] satisfies Route[];

@@ -35,7 +35,7 @@
 	export { className as class };
 </script>
 
-<pre class={cn('bg-error',className)} use:setCodeString>
+<pre class={cn('bg-error', className)} use:setCodeString>
 <slot />
 </pre>
 

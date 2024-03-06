@@ -12,11 +12,7 @@
 	<title>{meta.title}</title>
 	<meta name="description" content={meta.description} />
 	<meta name="keywords" content={meta.category.join(',')} />
-	<meta
-		content={meta.thumb}
-		name="twitter:image"
-		property="og:image"
-	/>
+	<meta content={meta.thumb} name="twitter:image" property="og:image" />
 </svelte:head>
 
 <article class="container">

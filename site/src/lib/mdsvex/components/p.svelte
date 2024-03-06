@@ -5,7 +5,6 @@
 	export { className as class };
 </script>
 
-
 <p class={cn('[&:not(:first-child)]:my-3', className)} {...$$restProps}>
-	<slot/>
+	<slot />
 </p>

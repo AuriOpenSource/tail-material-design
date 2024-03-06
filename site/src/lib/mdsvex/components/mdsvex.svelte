@@ -17,4 +17,14 @@
 	export let radix = '';
 </script>
 
-<slot {snippets} {schemas} {previews} {keyboard} {title} {description} {source} {component} {radix} />
+<slot
+	{snippets}
+	{schemas}
+	{previews}
+	{keyboard}
+	{title}
+	{description}
+	{source}
+	{component}
+	{radix}
+/>

@@ -12,6 +12,6 @@
 	export let itemsPosition = 'navrail-center';
 </script>
 
-<nav {...$$restProps} class={cn('navrail min-w-[80px]', itemsPosition, className)}>
+<nav {...$$restProps} class={cn('navrail z-10 min-w-[80px]', itemsPosition, className)}>
 	<slot />
 </nav>

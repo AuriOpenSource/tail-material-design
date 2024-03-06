@@ -77,8 +77,6 @@ export const mdsvexOptions = {
 	},
 	highlight: {
 		highlighter: async (code, lang) => {
-			console.log('asdasd :>>', await rehypePrettyCode());
-
 			const highlighter = await getHighlighter({
 				langs: ['javascript', 'typescript', 'svelte', 'html', 'text', 'bash'],
 				themes: ['github-dark-dimmed']
@@ -101,6 +99,7 @@ export const mdsvexOptions = {
 			const html = escapeSvelte(htmlHighlighted);
 
 			return `
+				${code}
 				<div class="code-block">
 					<button class="copy"></button>
 					<span class="lang">${lang}</span>

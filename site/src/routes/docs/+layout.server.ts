@@ -7,7 +7,7 @@ export const load = (async () => {
 	for (const path in paths) {
 		const file = paths[path];
 		console.log(path.split('/'));
-		
+
 		const slug = path.split('/').at(-2)?.replace('.md', '');
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {

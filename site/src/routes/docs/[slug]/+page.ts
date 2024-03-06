@@ -1,7 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
-
 /**
  * The `interface Post` is defining the structure of an object that represents a blog post.
  * It has the following properties
@@ -32,7 +31,7 @@ export const load = (async ({ params }) => {
 	try {
 		const post = (await import(`../../../../documentation/${params.slug}/index.md`)) as ContentType;
 		console.log('+page.ts', post);
-		
+
 		return {
 			content: post.default,
 			meta: post.metadata
