@@ -1,1 +1,1 @@
-export {default as Fab} from './fab.svelte';
+export { default as Fab } from './fab.svelte';

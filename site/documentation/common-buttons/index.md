@@ -37,10 +37,6 @@ Capitalize the first letter of the first word and proper nouns in button label t
 
 You can just use the common structure, that alone can make it look like a ghost button, it adds padding, fully rounded corners and holds the label text.
 
-<div>
-  <button class="btn btn-filled">Sample</button>
-</div>
-
 ```svelte
 <button class="btn">Common</button>
 ```

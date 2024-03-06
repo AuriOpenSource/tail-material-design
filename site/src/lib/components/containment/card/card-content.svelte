@@ -14,6 +14,9 @@
 	export let filled = false;
 </script>
 
-<section {...$$restProps} class={cn('card', { 'card-filled': filled, 'card-outlined': outlined }, className)}>
+<section
+	{...$$restProps}
+	class={cn('card', { 'card-filled': filled, 'card-outlined': outlined }, className)}
+>
 	<slot />
 </section>

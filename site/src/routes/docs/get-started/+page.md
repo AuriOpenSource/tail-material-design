@@ -31,13 +31,13 @@ pnpm add -D tail-material-design
 3. Import and configure Tail Material Design in your Tailwind CSS configuration file (typically named tailwind.config.js):
 
 ```typescript ln
-import tmd from "tail-material-design";
-import type { Config } from "tailwindcss";
+import tmd from 'tail-material-design';
+import type { Config } from 'tailwindcss';
 
 export default {
-  plugins: [tmd],
+	plugins: [tmd]
 
-  // rest of your config...
+	// rest of your config...
 } satisfies Config;
 ```
 
@@ -45,19 +45,19 @@ export default {
 
 ```html
 <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/tail-material-design/dist/components/<COMPONENT_NAME>.min.css"
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/tail-material-design/dist/components/<COMPONENT_NAME>.min.css"
 />
 <!-- or you can use the link with all components -->
 <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/tail-material-design/dist/components.min.css"
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/tail-material-design/dist/components.min.css"
 />
 ```
 
 ```css
 /* As an alternative, you can install the package and import on your css file */
-@import url("https://cdn.jsdelivr.net/npm/tail-material-design/dist/components.min.css");
+@import url('https://cdn.jsdelivr.net/npm/tail-material-design/dist/components.min.css');
 ```
 
 ### We sugest you use the tailwind-material-colors package
@@ -101,10 +101,11 @@ export default withMaterialColors({
 Here's a simple example of how you can leverage the Material Design styles in your web app:
 
 ```svelte live async title=Button.svelte
-  <button class="btn btn-primary">Click Here</button>
-  <style>
-    @import url("https://cdn.jsdelivr.net/gh/AuriOpenSource/tail-material-design@master/dist/components/actions/btn.min.css");
-  </style>
+<button class="btn btn-primary">Click Here</button>
+
+<style>
+	@import url('https://cdn.jsdelivr.net/gh/AuriOpenSource/tail-material-design@master/dist/components/actions/btn.min.css');
+</style>
 ```
 
 ## What we have already done

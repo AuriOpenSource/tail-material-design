@@ -6,5 +6,5 @@
 </script>
 
 <ul class={cn('pl-8 first:mt-0 last:mb-0', className)} {...$$restProps}>
-<slot/></ul>
-
+	<slot />
+</ul>

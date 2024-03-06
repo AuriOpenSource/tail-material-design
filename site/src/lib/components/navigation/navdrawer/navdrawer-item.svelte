@@ -19,9 +19,14 @@
 	export { className as class };
 </script>
 
-<a {href} class={cn('flex items-center min-h-14 gap-3 pl-4 pr-6 rounded-full', 
-	currentRoute===href ? 'bg-secondary-container' : ''
-,className)}>
+<a
+	{href}
+	class={cn(
+		'flex items-center min-h-14 gap-3 pl-4 pr-6 rounded-full',
+		currentRoute === href ? 'bg-secondary-container' : '',
+		className
+	)}
+>
 	<Icon {icon} width="24px" />
 	<span class="flex-1">
 		<slot />

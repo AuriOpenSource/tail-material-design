@@ -5,7 +5,6 @@
 	export { className as class };
 </script>
 
-
 <li class={cn('relative mb-4', className)} {...$$restProps}>
 	<slot />
 </li>
