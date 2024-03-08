@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { cn } from '$lib/utils';
 	import { writable } from 'svelte/store';
-	import { e } from 'vitest/dist/index-5aad25c1';
 
 	function createCopyCodeButton() {
 		let codeString = '';
@@ -30,19 +28,16 @@
 		};
 	}
 
+	
+
 	const { copied, copyCode, setCodeString } = createCopyCodeButton();
-	let className: string | undefined | null = undefined;
-	export { className as class };
+	// let className: string | undefined | null = undefined;
+	// export { className as class };
 </script>
 
-<pre class={cn('bg-error', className)} use:setCodeString>
-<slot />
-</pre>
-
-<button class="btn btn-filled" on:click={copyCode}>
-	{#if $copied}
-		S
-	{:else}
-		N
-	{/if}
-</button>
+<div class="code-block">
+	<button class="copy" on:click={copyCode}></button>
+	<pre glow use:setCodeString>
+		<slot />
+	</pre>
+</div>
