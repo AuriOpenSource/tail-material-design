@@ -2,7 +2,6 @@
 	import { button } from '$lib/utils/examples.json';
 	import { ExampleComponent, CodeBlock } from '$lib/components/doc-component';
 	import Button from '$lib/components/actions/buttons/button.svelte';
-
 </script>
 
 <div class="min-h-full flex justify-center items-center">
@@ -11,9 +10,7 @@
 			<Button filled>Click</Button>
 		</div>
 		<div slot="code">
-			<CodeBlock lang="html">
-				{button.filled.html}
-			</CodeBlock>
+			{button.filled.html}
 		</div>
 	</ExampleComponent>
 </div>

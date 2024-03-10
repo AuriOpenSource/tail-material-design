@@ -2,6 +2,7 @@
 	import Icon from '@iconify/svelte';
 	import Button from '../actions/buttons/button.svelte';
 	import { browser } from '$app/environment';
+	import CodeBlock from './CodeBlock.svelte';
 
 	export let copy: string;
 
@@ -17,7 +18,7 @@
 
 		copied = true;
 		clearTimeout(copyTimeout);
-		copyTimeout = setTimeout(() => copied = false, 5000);
+		copyTimeout = setTimeout(() => (copied = false), 5000);
 	};
 </script>
 
@@ -43,17 +44,19 @@
 				<Icon icon="teenyicons:tablet-outline" />
 			</Button>
 			<Button>
-				<Icon icon="bi:phone"/>
+				<Icon icon="bi:phone" />
 			</Button>
 		</div>
 	</div>
-	<div
-		class="relative py-10 px-10 w-full rounded-t-none sm:text-sm border-primary"
-	>
+	<div class="relative py-10 px-10 w-full rounded-t-none sm:text-sm border-primary">
 		{#if showCode}
-			<slot name="code" />
+			<CodeBlock lang="html">
+				<slot name="code" />
+			</CodeBlock>
 			<Button onClick={handleCodeCopy} class="absolute top-2 right-0">
-				<span class="flex justify-center items-center text-primary transition-all hover:bg-background-hover w-10 h-10">
+				<span
+					class="flex justify-center items-center text-primary transition-all hover:bg-background-hover w-10 h-10"
+				>
 					<Icon icon="uiw:copy" width="1.2rem" height="1.2rem" />
 				</span>
 			</Button>
@@ -61,7 +64,9 @@
 			<slot name="component" />
 		{/if}
 		{#if copied}
-			<div class="absolute flex items-center gap-1 bottom-3 h-4 opacity-100 animate-up left-[45%] text-primary">
+			<div
+				class="absolute flex items-center gap-1 bottom-3 h-4 opacity-100 animate-up left-[45%] text-primary"
+			>
 				<Icon icon="lucide:check-check" />
 				<span>Copied</span>
 			</div>
