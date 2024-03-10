@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { button } from '$lib/utils/examples';
+	import { button } from '$lib/utils/examples.json';
 	import { ExampleComponent, CodeBlock } from '$lib/components/doc-component';
 	import Button from '$lib/components/actions/buttons/button.svelte';
 
