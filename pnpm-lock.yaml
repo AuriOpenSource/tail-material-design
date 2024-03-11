@@ -50,6 +50,12 @@ importers:
       '@iconify/svelte':
         specifier: ^3.1.6
         version: 3.1.6(svelte@3.59.2)
+      '@melt-ui/pp':
+        specifier: ^0.3.0
+        version: 0.3.0(@melt-ui/svelte@0.75.3)(svelte@3.59.2)
+      '@melt-ui/svelte':
+        specifier: ^0.75.3
+        version: 0.75.3(svelte@3.59.2)
       '@playwright/test':
         specifier: ^1.42.0
         version: 1.42.0
@@ -104,6 +110,9 @@ importers:
       mdsvex:
         specifier: ^0.11.0
         version: 0.11.0(svelte@3.59.2)
+      nue-glow:
+        specifier: ^0.1.3
+        version: 0.1.3
       postcss:
         specifier: ^8.4.35
         version: 8.4.35
@@ -125,6 +134,9 @@ importers:
       remark-gfm:
         specifier: ^4.0.0
         version: 4.0.0
+      remark-sectionize:
+        specifier: ^2.0.0
+        version: 2.0.0
       remark-unwrap-images:
         specifier: ^4.0.0
         version: 4.0.0
@@ -746,8 +758,35 @@ packages:
     resolution: {integrity: sha512-0FCeqG6WvK4/Cc06F/xXMd/pv4FeisI0c1tUpBbfhA2n9Y8eZEv4Karjbmf2ZqQCPUWMrGp8A571tCjizxoTiQ==}
     dev: true
 
+  /@melt-ui/pp@0.3.0(@melt-ui/svelte@0.75.3)(svelte@3.59.2):
+    resolution: {integrity: sha512-b07Bdh8l2KcwKVCXOY+SoBw1dk9eWvQfMSi6SoacpRVyVmmfpi0kV4oGt3HYF0tUCB3sEmVicxse50ZzZxEzEA==}
+    engines: {pnpm: '>=8.6.3'}
+    peerDependencies:
+      '@melt-ui/svelte': '>= 0.29.0'
+      svelte: ^3.55.0 || ^4.0.0 || ^5.0.0-next.1
+    dependencies:
+      '@melt-ui/svelte': 0.75.3(svelte@3.59.2)
+      estree-walker: 3.0.3
+      magic-string: 0.30.7
+      svelte: 3.59.2
+    dev: true
+
   /@melt-ui/svelte@0.75.2(svelte@3.59.2):
     resolution: {integrity: sha512-EZYH5iEzHs/CPsWqRlH6AnJ70sTuPB4llVK3ajafWig6I5q3qyGU8NIz4aozUssL0edf9BKmyDVAy6Vksy1fbA==}
+    peerDependencies:
+      svelte: '>=3 <5'
+    dependencies:
+      '@floating-ui/core': 1.6.0
+      '@floating-ui/dom': 1.6.3
+      '@internationalized/date': 3.5.2
+      dequal: 2.0.3
+      focus-trap: 7.5.4
+      nanoid: 5.0.6
+      svelte: 3.59.2
+    dev: true
+
+  /@melt-ui/svelte@0.75.3(svelte@3.59.2):
+    resolution: {integrity: sha512-EA2IKn7w9qtzO/M7VEENpphQ9A4az+QDMQbA8SJLuKyu+S8NWliln5y9vvmnx9dZF8GtKtUKuxpwRNyPg5LAOg==}
     peerDependencies:
       svelte: '>=3 <5'
     dependencies:
@@ -2412,6 +2451,12 @@ packages:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
     dev: true
 
+  /estree-walker@3.0.3:
+    resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==}
+    dependencies:
+      '@types/estree': 1.0.5
+    dev: true
+
   /esutils@2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
@@ -3691,6 +3736,11 @@ packages:
       boolbase: 1.0.0
     dev: true
 
+  /nue-glow@0.1.3:
+    resolution: {integrity: sha512-XZDk/2zaJ1wODEXsKpSQN54W1uHPovqB70bEAbAAlPfpUtJsH/AynAHYX26MYsNWxFrFUCr2BIY4fVHJXSGJXA==}
+    engines: {bun: '>= 1', node: '>= 18'}
+    dev: true
+
   /object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
@@ -4546,6 +4596,13 @@ packages:
       - supports-color
     dev: true
 
+  /remark-sectionize@2.0.0:
+    resolution: {integrity: sha512-B+sCNNQroXybxX5Gwu9xbkjFIgK6vHMwbgPM/CEzQTP2ODxUiBsQRBjoSC6XR+yPOkgHvXV83HWCNA8IZuvJKg==}
+    dependencies:
+      unist-util-find-after: 4.0.1
+      unist-util-visit: 4.1.2
+    dev: true
+
   /remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
     dependencies:
@@ -5323,6 +5380,13 @@ packages:
       is-plain-obj: 4.1.0
       trough: 2.2.0
       vfile: 6.0.1
+    dev: true
+
+  /unist-util-find-after@4.0.1:
+    resolution: {integrity: sha512-QO/PuPMm2ERxC6vFXEPtmAutOopy5PknD+Oq64gGwxKtk4xwo9Z97t9Av1obPmGU0IyTa6EKYUfTrK2QJS3Ozw==}
+    dependencies:
+      '@types/unist': 2.0.10
+      unist-util-is: 5.2.1
     dev: true
 
   /unist-util-is@5.2.1:
